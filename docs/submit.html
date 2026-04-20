@@ -435,7 +435,7 @@
     continueBtn.addEventListener('click', async () => {
       // Fetch existing names for uniqueness check
       try {
-        const r = await fetch('../index.json');
+        const r = await fetch('./index.json');
         const d = await r.json();
         existingNames = new Set((d.plugins || []).map(p => p.name));
       } catch (_) {}
