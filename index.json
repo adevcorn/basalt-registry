@@ -61,6 +61,18 @@
       "hook_flags": 515,
       "file_globs": ["**/*.rs", "**/Cargo.toml", "**/Cargo.lock"],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/lsp-rust-analyzer.wasm"
+    },
+    {
+      "name": "cargo-project-model",
+      "version": "0.1.0",
+      "description": "Cargo workspace project model provider. Exposes crates, targets, features, and dependency graph for Rust projects.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt",
+      "tags": ["rust", "cargo", "project-model"],
+      "capabilities": ["PROJECT_MODEL"],
+      "hook_flags": 256,
+      "file_globs": ["**/Cargo.toml"],
+      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/cargo-project-model.wasm"
     }
   ]
 }
