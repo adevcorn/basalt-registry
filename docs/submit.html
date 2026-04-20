@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit Plugin — Basalt Registry</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Submit your WASM plugin to the Basalt plugin registry.">
+  <style>
+    /* Inline JSON preview syntax coloring */
+    #preview-box { tab-size: 2; }
+    .tok-key  { color: #79b8ff; }
+    .tok-str  { color: #f6c90e; }
+    .tok-num  { color: #f97583; }
+    .tok-bool { color: #bf7af0; }
+    .tok-null { color: #f97583; }
+    .tok-punc { color: rgba(255,255,255,0.28); }
+
+    /* Animated step indicator */
+    .steps .step { transition: background 0.2s, color 0.2s; }
+
+    /* Name availability indicator */
+    .name-status {
+      font-size: 0.76rem;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 18px;
+    }
+    .name-ok   { color: var(--green); }
+    .name-err  { color: var(--red); }
+    .name-chk  { color: var(--text-3); }
+
+    /* Globs / tags textarea rows */
+    textarea.compact { min-height: 52px; }
+
+    /* PR result panel */
+    #pr-result { display: none; }
+  </style>
+</head>
+<body>
+  <div class="page form-page">
+
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect width="20" height="20" rx="5" fill="#5cc1f5" fill-opacity="0.15"/>
+          <rect x="4" y="4" width="5" height="5" rx="1.5" fill="#5cc1f5"/>
+          <rect x="11" y="4" width="5" height="5" rx="1.5" fill="#5cc1f5" fill-opacity="0.5"/>
+          <rect x="4" y="11" width="5" height="5" rx="1.5" fill="#5cc1f5" fill-opacity="0.5"/>
+          <rect x="11" y="11" width="5" height="5" rx="1.5" fill="#5cc1f5" fill-opacity="0.25"/>
+        </svg>
+        Basalt Registry
+      </a>
+      <nav>
+        <a class="btn btn-sm" href="index.html">← Browse</a>
+      </nav>
+    </header>
+
+    <h1 class="page-title">Submit a Plugin</h1>
+    <p class="page-subtitle">
+      Your submission opens a pull request against
+      <a href="https://github.com/adevcorn/basalt-registry" target="_blank" rel="noopener">adevcorn/basalt-registry</a>
+      from your GitHub account. A maintainer reviews and merges it.
+    </p>
+
+    <!-- Step indicator -->
+    <div class="steps" id="steps">
+      <div class="step active" data-step="1">
+        <div class="step-num">1</div> Authenticate
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-num">2</div> Plugin details
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-num">3</div> Review &amp; submit
+      </div>
+    </div>
+
+    <!-- Alert bar -->
+    <div class="alert" id="alert"></div>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <!-- STEP 1: Auth                                                        -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <div id="step-1">
+      <div class="section">
+        <div class="auth-box" id="auth-box">
+          <div class="gh-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.55)"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <p>Sign in with GitHub to submit a plugin. We'll use your account to open a pull request on your behalf. Only <code>public_repo</code> scope is requested.</p>
+          <button class="btn btn-primary" id="login-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            Login with GitHub
+          </button>
+        </div>
+
+        <div id="user-box" style="display:none">
+          <div class="auth-box" style="padding:20px 24px">
+            <div class="user-chip" id="user-chip">
+              <img id="user-avatar" src="" alt="" width="20" height="20">
+              <span id="user-login"></span>
+            </div>
+            <p style="margin-top:4px;font-size:0.8rem">Signed in. Ready to continue.</p>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-primary" id="continue-btn">
+                Continue to plugin details →
+              </button>
+              <button class="btn btn-sm" id="logout-btn">Sign out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <!-- STEP 2: Plugin details                                              -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <div id="step-2" style="display:none">
+
+      <div class="section">
+        <div class="section-title">Identity</div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Plugin name <span class="required">*</span> <span class="hint">lowercase, hyphens only</span></label>
+            <input type="text" id="f-name" class="mono" placeholder="my-plugin" autocomplete="off" spellcheck="false">
+            <div class="name-status" id="name-status"></div>
+          </div>
+          <div class="field">
+            <label>Version <span class="required">*</span> <span class="hint">semver</span></label>
+            <input type="text" id="f-version" class="mono" placeholder="0.1.0" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Description <span class="required">*</span> <span class="hint">max 280 chars</span></label>
+          <textarea id="f-description" rows="2" placeholder="What does your plugin do?"></textarea>
+          <div class="char-count" id="desc-count">0 / 280</div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Author <span class="required">*</span></label>
+            <input type="text" id="f-author" placeholder="github-username" autocomplete="off">
+          </div>
+          <div class="field">
+            <label>Homepage <span class="hint">optional URL</span></label>
+            <input type="url" id="f-homepage" placeholder="https://github.com/you/plugin">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Capabilities</div>
+        <div class="cap-grid">
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="AGENT_LAUNCHER">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">AGENT_LAUNCHER</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="DIAGNOSTICS">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">DIAGNOSTICS</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="HOVER">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">HOVER</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="PROJECT_MODEL">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">PROJECT_MODEL</span>
+          </label>
+        </div>
+        <div class="field" style="margin-top:14px">
+          <label>hook_flags <span class="hint">auto-computed, or override manually</span></label>
+          <input type="text" id="f-hook-flags" class="mono" placeholder="1024" autocomplete="off">
+          <div style="font-size:0.74rem;color:var(--text-3);margin-top:4px">
+            DIAGNOSTICS=1, PROJECT_MODEL=256, HOVER=512, AGENT_LAUNCHER=1024
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Matching</div>
+        <div class="field">
+          <label>Tags <span class="required">*</span> <span class="hint">comma-separated</span></label>
+          <textarea class="compact mono" id="f-tags" rows="2" placeholder="ai, agent, rust"></textarea>
+        </div>
+        <div class="field">
+          <label>File globs <span class="required">*</span> <span class="hint">comma-separated, e.g. **/*.rs</span></label>
+          <textarea class="compact mono" id="f-globs" rows="2" placeholder="**/*.rs, **/Cargo.toml"></textarea>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Distribution</div>
+        <div class="field">
+          <label>Download URL <span class="required">*</span></label>
+          <input type="url" id="f-download-url" class="mono" placeholder="https://github.com/you/plugin/releases/download/v0.1.0/plugin.wasm">
+          <div style="font-size:0.76rem;color:var(--text-3);margin-top:6px;line-height:1.6">
+            Must be a direct link to a <code>.wasm</code> file.
+            <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository" target="_blank" rel="noopener">How to create a GitHub Release →</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:4px">
+        <button class="btn" id="back-to-1">← Back</button>
+        <button class="btn btn-primary" id="to-step-3">Review &amp; Submit →</button>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <!-- STEP 3: Review & submit                                             -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <div id="step-3" style="display:none">
+
+      <div class="section">
+        <div class="section-title">JSON preview — what will be added to index.json</div>
+        <div class="preview" id="preview-box"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">What will happen</div>
+        <ol style="padding-left:18px;color:var(--text-2);font-size:0.85rem;line-height:2">
+          <li>Fork <strong>adevcorn/basalt-registry</strong> to your account (if not already forked)</li>
+          <li>Create branch <code id="pr-branch-name" style="font-family:var(--mono);font-size:0.82rem;color:var(--accent)"></code> on your fork</li>
+          <li>Commit the updated <code>index.json</code></li>
+          <li>Open a pull request → maintainer reviews → CI validates → merge</li>
+        </ol>
+      </div>
+
+      <div class="submit-footer">
+        <button class="btn" id="back-to-2">← Edit</button>
+        <button class="btn btn-green" id="submit-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Open Pull Request
+        </button>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <!-- PR result                                                            -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <div id="pr-result">
+      <div class="success-panel">
+        <div class="icon">🎉</div>
+        <h2>Pull request opened!</h2>
+        <p>Your plugin has been submitted for review. The CI will validate your entry, and a maintainer will merge it once everything looks good.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary" id="pr-link" href="#" target="_blank" rel="noopener">View pull request →</a>
+          <a class="btn" href="index.html">Browse Registry</a>
+          <button class="btn" id="submit-another">Submit another</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page -->
+
+  <script>
+  (() => {
+    'use strict';
+
+    // ── Config ──────────────────────────────────────────────────────────────
+    // Replace with your deployed Fly.io app URL after `fly deploy`
+    const AUTH_PROXY     = 'https://basalt-registry-auth.fly.dev';
+    const REGISTRY_OWNER = 'adevcorn';
+    const REGISTRY_REPO  = 'basalt-registry';
+    const INDEX_PATH     = 'index.json';
+    const GITHUB_API     = 'https://api.github.com';
+
+    // capability → hook_flag bitmask
+    const CAP_FLAGS = {
+      DIAGNOSTICS:    1,
+      PROJECT_MODEL:  256,
+      HOVER:          512,
+      AGENT_LAUNCHER: 1024,
+    };
+
+    // ── DOM ─────────────────────────────────────────────────────────────────
+    const $ = id => document.getElementById(id);
+
+    // step panels
+    const panels = { 1: $('step-1'), 2: $('step-2'), 3: $('step-3') };
+    let currentStep = 1;
+
+    // auth
+    const loginBtn    = $('login-btn');
+    const continueBtn = $('continue-btn');
+    const logoutBtn   = $('logout-btn');
+    const authBox     = $('auth-box');
+    const userBox     = $('user-box');
+    const userChip    = $('user-chip');
+    const userAvatar  = $('user-avatar');
+    const userLogin   = $('user-login');
+
+    // form fields
+    const fName        = $('f-name');
+    const fVersion     = $('f-version');
+    const fDesc        = $('f-description');
+    const fAuthor      = $('f-author');
+    const fHomepage    = $('f-homepage');
+    const fHookFlags   = $('f-hook-flags');
+    const fTags        = $('f-tags');
+    const fGlobs       = $('f-globs');
+    const fDownload    = $('f-download-url');
+    const descCount    = $('desc-count');
+    const nameStatus   = $('name-status');
+
+    // ── State ────────────────────────────────────────────────────────────────
+    let token       = sessionStorage.getItem('gh_token') || null;
+    let ghUser      = JSON.parse(sessionStorage.getItem('gh_user') || 'null');
+    let existingNames = new Set();
+    let nameCheckTimer = null;
+
+    // ── Helpers ──────────────────────────────────────────────────────────────
+    function showAlert(msg, type = 'error') {
+      const el = $('alert');
+      el.textContent = msg;
+      el.className = `alert alert-${type} show`;
+    }
+    function clearAlert() {
+      $('alert').className = 'alert';
+    }
+
+    function setStep(n) {
+      Object.entries(panels).forEach(([k, el]) => {
+        el.style.display = String(k) === String(n) ? '' : 'none';
+      });
+      document.querySelectorAll('.step').forEach(el => {
+        const s = Number(el.dataset.step);
+        el.classList.toggle('active', s === n);
+        el.classList.toggle('done',   s < n);
+      });
+      currentStep = n;
+      clearAlert();
+    }
+
+    function gh(path, opts = {}) {
+      return fetch(`${GITHUB_API}${path}`, {
+        ...opts,
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept:        'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28',
+          'Content-Type': 'application/json',
+          ...(opts.headers || {}),
+        },
+      }).then(async r => {
+        if (!r.ok) {
+          const body = await r.json().catch(() => ({}));
+          throw new Error(body.message || `GitHub API ${r.status}`);
+        }
+        return r.status === 204 ? null : r.json();
+      });
+    }
+
+    function csvToArray(str) {
+      return str.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+    function buildEntry() {
+      const caps = [...document.querySelectorAll('input[name=cap]:checked')]
+        .map(el => el.value);
+      const autoFlags = caps.reduce((acc, c) => acc | (CAP_FLAGS[c] || 0), 0);
+      const rawFlags  = fHookFlags.value.trim();
+      const hookFlags = rawFlags ? (parseInt(rawFlags, 10) || autoFlags) : autoFlags;
+
+      return {
+        name:         fName.value.trim(),
+        version:      fVersion.value.trim(),
+        description:  fDesc.value.trim(),
+        author:       fAuthor.value.trim(),
+        ...(fHomepage.value.trim() ? { homepage: fHomepage.value.trim() } : {}),
+        tags:         csvToArray(fTags.value),
+        capabilities: caps,
+        hook_flags:   hookFlags,
+        file_globs:   csvToArray(fGlobs.value),
+        download_url: fDownload.value.trim(),
+      };
+    }
+
+    // ── Syntax-highlighted JSON preview ─────────────────────────────────────
+    function colorJSON(obj) {
+      const raw  = JSON.stringify(obj, null, 2);
+      return raw
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        // strings
+        .replace(/"([^"]+)"(\s*:)/g, '<span class="tok-key">"$1"</span><span class="tok-punc">$2</span>')
+        .replace(/:\s*"([^"]*)"/g, ': <span class="tok-str">"$1"</span>')
+        // numbers
+        .replace(/:\s*(-?\d+\.?\d*)/g, ': <span class="tok-num">$1</span>')
+        // booleans / null
+        .replace(/:\s*(true|false)/g, ': <span class="tok-bool">$1</span>')
+        .replace(/:\s*(null)/g, ': <span class="tok-null">$1</span>')
+        // array string items
+        .replace(/^\s+"([^"]+)"(,?)$/mg, (m, s, c) => {
+          const indent = m.match(/^(\s+)/)?.[1] || '';
+          return `${indent}<span class="tok-str">"${s}"</span><span class="tok-punc">${c}</span>`;
+        });
+    }
+
+    // ── Auth flow ────────────────────────────────────────────────────────────
+    function refreshAuthUI() {
+      if (token && ghUser) {
+        authBox.style.display = 'none';
+        userBox.style.display = '';
+        userAvatar.src    = ghUser.avatar_url;
+        userLogin.textContent = ghUser.login;
+        fAuthor.value = fAuthor.value || ghUser.login;
+      } else {
+        authBox.style.display = '';
+        userBox.style.display = 'none';
+      }
+    }
+
+    loginBtn.addEventListener('click', () => {
+      window.location.href = `${AUTH_PROXY}/auth/login`;
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      token = null; ghUser = null;
+      sessionStorage.removeItem('gh_token');
+      sessionStorage.removeItem('gh_user');
+      refreshAuthUI();
+    });
+
+    continueBtn.addEventListener('click', async () => {
+      // Fetch existing names for uniqueness check
+      try {
+        const r = await fetch('../index.json');
+        const d = await r.json();
+        existingNames = new Set((d.plugins || []).map(p => p.name));
+      } catch (_) {}
+      setStep(2);
+    });
+
+    // Handle OAuth callback — token arrives as hash fragment
+    const hash = new URLSearchParams(window.location.hash.slice(1));
+    if (hash.has('token')) {
+      token = hash.get('token');
+      sessionStorage.setItem('gh_token', token);
+      // Clear token from URL
+      history.replaceState(null, '', window.location.pathname);
+      // Fetch user info
+      gh('/user').then(u => {
+        ghUser = u;
+        sessionStorage.setItem('gh_user', JSON.stringify(u));
+        refreshAuthUI();
+      }).catch(() => showAlert('Could not fetch GitHub user info.'));
+    }
+
+    refreshAuthUI();
+
+    // ── Step 2 validation ────────────────────────────────────────────────────
+    $('back-to-1').addEventListener('click', () => setStep(1));
+
+    // char counter
+    fDesc.addEventListener('input', () => {
+      const n = fDesc.value.length;
+      descCount.textContent = `${n} / 280`;
+      descCount.classList.toggle('warn', n > 250);
+      if (n > 280) fDesc.value = fDesc.value.slice(0, 280);
+    });
+
+    // capability auto-flags
+    document.querySelectorAll('input[name=cap]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const caps = [...document.querySelectorAll('input[name=cap]:checked')].map(e => e.value);
+        const flags = caps.reduce((acc, c) => acc | (CAP_FLAGS[c] || 0), 0);
+        fHookFlags.value = flags || '';
+      });
+    });
+
+    // name uniqueness + slug check
+    fName.addEventListener('input', () => {
+      clearTimeout(nameCheckTimer);
+      const v = fName.value.trim();
+      nameStatus.innerHTML = '';
+      if (!v) return;
+      if (!/^[a-z0-9-]+$/.test(v)) {
+        nameStatus.innerHTML = '<span class="name-err">✗ Only lowercase letters, numbers, and hyphens</span>';
+        return;
+      }
+      nameStatus.innerHTML = '<span class="name-chk"><span class="spinner"></span> Checking…</span>';
+      nameCheckTimer = setTimeout(() => {
+        if (existingNames.has(v)) {
+          nameStatus.innerHTML = '<span class="name-err">✗ Name already taken in the registry</span>';
+        } else {
+          nameStatus.innerHTML = '<span class="name-ok">✓ Name available</span>';
+        }
+      }, 400);
+    });
+
+    $('to-step-3').addEventListener('click', () => {
+      const entry = buildEntry();
+      const errs = [];
+
+      if (!entry.name)           errs.push('Plugin name is required');
+      if (!/^[a-z0-9-]+$/.test(entry.name)) errs.push('Name must match ^[a-z0-9-]+$');
+      if (existingNames.has(entry.name))     errs.push('Name already exists in the registry');
+      if (!entry.version)        errs.push('Version is required');
+      if (!/^\d+\.\d+\.\d+$/.test(entry.version)) errs.push('Version must be semver (e.g. 0.1.0)');
+      if (!entry.description)    errs.push('Description is required');
+      if (!entry.author)         errs.push('Author is required');
+      if (entry.tags.length === 0)       errs.push('At least one tag is required');
+      if (entry.capabilities.length === 0) errs.push('Select at least one capability');
+      if (entry.file_globs.length === 0)   errs.push('At least one file glob is required');
+      if (!entry.download_url)   errs.push('Download URL is required');
+      if (entry.download_url && !entry.download_url.endsWith('.wasm'))
+        errs.push('Download URL must end with .wasm');
+
+      if (errs.length) { showAlert(errs[0]); return; }
+
+      // Populate review step
+      $('preview-box').innerHTML = colorJSON(entry);
+      $('pr-branch-name').textContent = `submit/${entry.name}`;
+      setStep(3);
+    });
+
+    // ── Step 3: submit ────────────────────────────────────────────────────────
+    $('back-to-2').addEventListener('click', () => setStep(2));
+
+    $('submit-btn').addEventListener('click', async () => {
+      const btn = $('submit-btn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Opening PR…';
+
+      try {
+        const entry   = buildEntry();
+        const branch  = `submit/${entry.name}`;
+        const login   = ghUser.login;
+
+        // ── 1. Ensure fork exists ──────────────────────────────────────────
+        showAlert('Step 1/4: Forking repository…', 'info');
+        let forkData;
+        try {
+          // Check if fork already exists
+          forkData = await gh(`/repos/${login}/${REGISTRY_REPO}`);
+        } catch (_) {
+          // Create the fork
+          forkData = await gh(`/repos/${REGISTRY_OWNER}/${REGISTRY_REPO}/forks`, {
+            method: 'POST',
+            body: JSON.stringify({ default_branch_only: true }),
+          });
+          // Wait for fork to propagate (GitHub is eventually consistent)
+          await new Promise(r => setTimeout(r, 3000));
+        }
+
+        // ── 2. Get current index.json SHA + content from upstream ──────────
+        showAlert('Step 2/4: Reading current index.json…', 'info');
+        const upstreamFile = await gh(
+          `/repos/${REGISTRY_OWNER}/${REGISTRY_REPO}/contents/${INDEX_PATH}?ref=main`
+        );
+        const upstreamContent = JSON.parse(atob(upstreamFile.content.replace(/\n/g, '')));
+
+        // Add new entry
+        upstreamContent.updated_at = new Date().toISOString().slice(0, 19) + 'Z';
+        upstreamContent.plugins.push(entry);
+        const newContent = JSON.stringify(upstreamContent, null, 2) + '\n';
+
+        // ── 3. Get or create branch on fork ───────────────────────────────
+        showAlert('Step 3/4: Creating branch on fork…', 'info');
+
+        // Get SHA of main on fork (may differ from upstream if fork is stale)
+        const mainRef = await gh(`/repos/${login}/${REGISTRY_REPO}/git/ref/heads/main`);
+        const baseSha = mainRef.object.sha;
+
+        // Create (or reset) the submit branch
+        try {
+          await gh(`/repos/${login}/${REGISTRY_REPO}/git/refs`, {
+            method: 'POST',
+            body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: baseSha }),
+          });
+        } catch (_) {
+          // Branch already exists — force-update it
+          await gh(`/repos/${login}/${REGISTRY_REPO}/git/refs/heads/${encodeURIComponent(branch)}`, {
+            method: 'PATCH',
+            body: JSON.stringify({ sha: baseSha, force: true }),
+          });
+        }
+
+        // ── 4. Commit updated index.json ───────────────────────────────────
+        // Get SHA of index.json on the branch
+        const forkFile = await gh(
+          `/repos/${login}/${REGISTRY_REPO}/contents/${INDEX_PATH}?ref=${encodeURIComponent(branch)}`
+        );
+
+        await gh(`/repos/${login}/${REGISTRY_REPO}/contents/${INDEX_PATH}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            message: `Add plugin: ${entry.name} v${entry.version}`,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha:     forkFile.sha,
+            branch,
+          }),
+        });
+
+        // ── 5. Open pull request ───────────────────────────────────────────
+        showAlert('Step 4/4: Opening pull request…', 'info');
+        const caps = entry.capabilities.join(', ') || 'none';
+        const prBody = [
+          `## Add plugin: \`${entry.name}\``,
+          '',
+          `**Version:** ${entry.version}`,
+          `**Author:** @${entry.author}`,
+          `**Capabilities:** ${caps}`,
+          '',
+          '### Description',
+          entry.description,
+          '',
+          '### Checklist',
+          '- [ ] Plugin binary is publicly accessible at `download_url`',
+          '- [ ] Binary exports `basalt_plugin_metadata`',
+          '- [ ] I own or have permission to distribute this plugin',
+          '',
+          '---',
+          '*Submitted via the Basalt Registry web form.*',
+        ].join('\n');
+
+        const pr = await gh(`/repos/${REGISTRY_OWNER}/${REGISTRY_REPO}/pulls`, {
+          method: 'POST',
+          body: JSON.stringify({
+            title: `Add plugin: ${entry.name} v${entry.version}`,
+            head:  `${login}:${branch}`,
+            base:  'main',
+            body:  prBody,
+          }),
+        });
+
+        // ── Success ────────────────────────────────────────────────────────
+        clearAlert();
+        $('step-3').style.display = 'none';
+        const prResult = $('pr-result');
+        prResult.style.display = '';
+        $('pr-link').href = pr.html_url;
+
+        // Update step indicator
+        document.querySelectorAll('.step').forEach(el => el.classList.add('done'));
+
+      } catch (err) {
+        showAlert(`Error: ${err.message}`);
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Open Pull Request`;
+      }
+    });
+
+    $('submit-another').addEventListener('click', () => {
+      // Reset form
+      ['f-name','f-version','f-description','f-author','f-homepage',
+       'f-hook-flags','f-tags','f-globs','f-download-url'].forEach(id => {
+        $(id).value = '';
+      });
+      document.querySelectorAll('input[name=cap]').forEach(cb => cb.checked = false);
+      descCount.textContent = '0 / 280';
+      nameStatus.innerHTML = '';
+      $('pr-result').style.display = 'none';
+      fAuthor.value = ghUser?.login || '';
+      setStep(2);
+    });
+
+  })();
+  </script>
+</body>
+</html>
