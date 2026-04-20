@@ -1,0 +1,103 @@
+name: Validate Registry
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema
+          cargo install wasm-tools 2>/dev/null || true
+
+      - name: Validate JSON schema
+        run: |
+          python3 - <<'EOF'
+          import json, jsonschema, sys
+
+          with open("schema.json") as f:
+              schema = json.load(f)
+          with open("index.json") as f:
+              index = json.load(f)
+
+          # Validate top-level index
+          jsonschema.validate(instance=index, schema=schema)
+
+          # Check for duplicate names
+          names = [p["name"] for p in index["plugins"]]
+          if len(names) != len(set(names)):
+              print("ERROR: duplicate plugin names found", file=sys.stderr)
+              sys.exit(1)
+
+          print(f"Schema validation passed for {len(names)} plugins.")
+          EOF
+
+      - name: Check download URLs are reachable
+        run: |
+          python3 - <<'EOF'
+          import json, subprocess, sys
+
+          with open("index.json") as f:
+              index = json.load(f)
+
+          failed = []
+          for plugin in index["plugins"]:
+              url = plugin["download_url"]
+              result = subprocess.run(
+                  ["curl", "--silent", "--head", "--fail", "--location", "--max-time", "15", url],
+                  capture_output=True
+              )
+              if result.returncode != 0:
+                  print(f"UNREACHABLE: {plugin['name']} -> {url}")
+                  failed.append(plugin["name"])
+              else:
+                  print(f"OK: {plugin['name']}")
+
+          if failed:
+              print(f"\nFailed URLs: {failed}", file=sys.stderr)
+              sys.exit(1)
+          EOF
+
+      - name: Check WASM exports (basalt_plugin_metadata)
+        run: |
+          which wasm-tools || { echo "wasm-tools not available, skipping WASM check"; exit 0; }
+
+          python3 - <<'EOF'
+          import json, subprocess, tempfile, os, sys
+          import urllib.request
+
+          with open("index.json") as f:
+              index = json.load(f)
+
+          failed = []
+          for plugin in index["plugins"]:
+              url = plugin["download_url"]
+              name = plugin["name"]
+              try:
+                  with tempfile.NamedTemporaryFile(suffix=".wasm", delete=False) as tmp:
+                      urllib.request.urlretrieve(url, tmp.name)
+                      result = subprocess.run(
+                          ["wasm-tools", "dump", tmp.name],
+                          capture_output=True, text=True
+                      )
+                      os.unlink(tmp.name)
+                      if "basalt_plugin_metadata" not in result.stdout:
+                          print(f"MISSING EXPORT: {name} does not export basalt_plugin_metadata")
+                          failed.append(name)
+                      else:
+                          print(f"OK: {name} exports basalt_plugin_metadata")
+              except Exception as e:
+                  print(f"ERROR checking {name}: {e}")
+                  failed.append(name)
+
+          if failed:
+              print(f"\nFailed plugins: {failed}", file=sys.stderr)
+              sys.exit(1)
+          EOF

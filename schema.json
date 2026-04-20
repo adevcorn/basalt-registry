@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/schema.json",
+  "title": "Basalt Plugin Registry Index",
+  "type": "object",
+  "required": ["version", "updated_at", "plugins"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version of this index file."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of the last index update."
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Plugin" }
+    }
+  },
+  "definitions": {
+    "Plugin": {
+      "type": "object",
+      "required": ["name", "version", "description", "author", "tags", "capabilities", "hook_flags", "file_globs", "download_url"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Unique plugin identifier (lowercase, hyphens allowed)."
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version string."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 280
+        },
+        "author": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string",
+          "format": "uri"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["DIAGNOSTICS", "PROJECT_MODEL", "HOVER", "AGENT_LAUNCHER"]
+          }
+        },
+        "hook_flags": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Bitmask of hooks this plugin registers."
+        },
+        "file_globs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "download_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Direct URL to the .wasm plugin binary."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
