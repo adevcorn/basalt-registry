@@ -7,60 +7,60 @@
       "version": "0.1.0",
       "description": "Google Gemini-powered AI coding agent with context-aware completions and chat.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-gemini-agent",
       "tags": ["ai", "agent", "gemini", "google"],
       "capabilities": ["AGENT_LAUNCHER"],
       "hook_flags": 1024,
       "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/gemini-agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gemini-agent/releases/download/v0.1.0/gemini_agent.wasm"
     },
     {
       "name": "codex-agent",
       "version": "0.1.0",
       "description": "OpenAI Codex-powered agent for code generation and refactoring.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-codex-agent",
       "tags": ["ai", "agent", "openai", "codex"],
       "capabilities": ["AGENT_LAUNCHER"],
       "hook_flags": 1024,
       "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py", "**/*.js"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/codex-agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-codex-agent/releases/download/v0.1.0/codex_agent.wasm"
     },
     {
       "name": "copilot-agent",
       "version": "0.1.0",
       "description": "GitHub Copilot agent integration providing inline suggestions and chat.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-copilot-agent",
       "tags": ["ai", "agent", "github", "copilot"],
       "capabilities": ["AGENT_LAUNCHER"],
       "hook_flags": 1024,
       "file_globs": ["**/*"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/copilot-agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.0/copilot_agent.wasm"
     },
     {
       "name": "swift-project-model",
       "version": "0.1.0",
       "description": "Swift package and Xcode project model provider. Exposes targets, products, and dependency graph.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-swift-project-model",
       "tags": ["swift", "xcode", "project-model"],
       "capabilities": ["PROJECT_MODEL"],
       "hook_flags": 256,
       "file_globs": ["**/*.swift", "**/Package.swift", "**/*.xcodeproj/**", "**/*.xcworkspace/**"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/swift-project-model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.0/swift_project_model.wasm"
     },
     {
       "name": "lsp-rust-analyzer",
       "version": "0.1.0",
       "description": "Rust Analyzer LSP bridge providing diagnostics, hover docs, and completions for Rust projects.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer",
       "tags": ["rust", "lsp", "diagnostics", "hover"],
       "capabilities": ["DIAGNOSTICS", "HOVER"],
       "hook_flags": 515,
       "file_globs": ["**/*.rs", "**/Cargo.toml", "**/Cargo.lock"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/lsp-rust-analyzer.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer/releases/download/v0.1.0/lsp_rust_analyzer.wasm"
     },
     {
       "name": "cargo-project-model",
@@ -72,7 +72,7 @@
       "capabilities": ["PROJECT_MODEL"],
       "hook_flags": 256,
       "file_globs": ["**/Cargo.toml"],
-      "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/cargo-project-model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer/releases/download/v0.1.0/cargo_project_model.wasm"
     }
   ]
 }
