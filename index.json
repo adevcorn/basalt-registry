@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-20T00:00:00Z",
+  "updated_at": "2026-04-20T15:39:30Z",
   "plugins": [
     {
       "name": "gemini-agent",
@@ -8,10 +8,22 @@
       "description": "Google Gemini-powered AI coding agent with context-aware completions and chat.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt",
-      "tags": ["ai", "agent", "gemini", "google"],
-      "capabilities": ["AGENT_LAUNCHER"],
+      "tags": [
+        "ai",
+        "agent",
+        "gemini",
+        "google"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
       "hook_flags": 1024,
-      "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py"],
+      "file_globs": [
+        "**/*.swift",
+        "**/*.rs",
+        "**/*.ts",
+        "**/*.py"
+      ],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/gemini-agent.wasm"
     },
     {
@@ -20,10 +32,23 @@
       "description": "OpenAI Codex-powered agent for code generation and refactoring.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt",
-      "tags": ["ai", "agent", "openai", "codex"],
-      "capabilities": ["AGENT_LAUNCHER"],
+      "tags": [
+        "ai",
+        "agent",
+        "openai",
+        "codex"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
       "hook_flags": 1024,
-      "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py", "**/*.js"],
+      "file_globs": [
+        "**/*.swift",
+        "**/*.rs",
+        "**/*.ts",
+        "**/*.py",
+        "**/*.js"
+      ],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/codex-agent.wasm"
     },
     {
@@ -32,10 +57,19 @@
       "description": "GitHub Copilot agent integration providing inline suggestions and chat.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt",
-      "tags": ["ai", "agent", "github", "copilot"],
-      "capabilities": ["AGENT_LAUNCHER"],
+      "tags": [
+        "ai",
+        "agent",
+        "github",
+        "copilot"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
       "hook_flags": 1024,
-      "file_globs": ["**/*"],
+      "file_globs": [
+        "**/*"
+      ],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/copilot-agent.wasm"
     },
     {
@@ -44,10 +78,21 @@
       "description": "Swift package and Xcode project model provider. Exposes targets, products, and dependency graph.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt",
-      "tags": ["swift", "xcode", "project-model"],
-      "capabilities": ["PROJECT_MODEL"],
+      "tags": [
+        "swift",
+        "xcode",
+        "project-model"
+      ],
+      "capabilities": [
+        "PROJECT_MODEL"
+      ],
       "hook_flags": 256,
-      "file_globs": ["**/*.swift", "**/Package.swift", "**/*.xcodeproj/**", "**/*.xcworkspace/**"],
+      "file_globs": [
+        "**/*.swift",
+        "**/Package.swift",
+        "**/*.xcodeproj/**",
+        "**/*.xcworkspace/**"
+      ],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/swift-project-model.wasm"
     },
     {
@@ -56,11 +101,40 @@
       "description": "Rust Analyzer LSP bridge providing diagnostics, hover docs, and completions for Rust projects.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt",
-      "tags": ["rust", "lsp", "diagnostics", "hover"],
-      "capabilities": ["DIAGNOSTICS", "HOVER"],
+      "tags": [
+        "rust",
+        "lsp",
+        "diagnostics",
+        "hover"
+      ],
+      "capabilities": [
+        "DIAGNOSTICS",
+        "HOVER"
+      ],
       "hook_flags": 515,
-      "file_globs": ["**/*.rs", "**/Cargo.toml", "**/Cargo.lock"],
+      "file_globs": [
+        "**/*.rs",
+        "**/Cargo.toml",
+        "**/Cargo.lock"
+      ],
       "download_url": "https://github.com/adevcorn/basalt-registry/releases/download/v0.1.0/lsp-rust-analyzer.wasm"
+    },
+    {
+      "name": "test",
+      "version": "0.1.0",
+      "description": "stuff",
+      "author": "adevcorn",
+      "tags": [
+        "test"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*.rs"
+      ],
+      "download_url": "example.com/test.wasm"
     }
   ]
 }
