@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T16:45:00Z",
+  "updated_at": "2026-04-27T20:05:00Z",
   "plugins": [
     {
       "name": "gemini-agent",
@@ -16,7 +16,7 @@
     },
     {
       "name": "codex-agent",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "OpenAI Codex-powered agent for code generation and refactoring.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-codex-agent",
@@ -24,11 +24,11 @@
       "capabilities": ["AGENT_LAUNCHER"],
       "hook_flags": 1024,
       "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py", "**/*.js"],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-codex-agent/releases/download/v0.1.0/codex_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-codex-agent/releases/download/v0.1.1/codex_agent.wasm"
     },
     {
       "name": "copilot-agent",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "GitHub Copilot agent integration providing inline suggestions and chat.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-copilot-agent",
@@ -36,7 +36,7 @@
       "capabilities": ["AGENT_LAUNCHER"],
       "hook_flags": 1024,
       "file_globs": ["**/*"],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.0/copilot_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.1/copilot_agent.wasm"
     },
     {
       "name": "swift-project-model",
