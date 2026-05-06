@@ -144,7 +144,7 @@
       "version": "0.1.0",
       "description": "Swift language-server bridge backed by sourcekit-lsp, providing project activation, diagnostics, and hover documentation.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-swift-lsp",
       "tags": [
         "swift",
         "lsp",
@@ -157,13 +157,13 @@
         "DIAGNOSTICS",
         "HOVER"
       ],
-      "hook_flags": 769,
+      "hook_flags": 6657,
       "file_globs": [
         "*.swift",
         "**/*.swift",
         "Package.swift"
       ],
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/swift-lsp/0.1.0/swift_lsp.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-lsp/releases/download/v0.1.0/swift_lsp.wasm"
     },
     {
       "name": "semantic-retrieval",
