@@ -3,7 +3,11 @@
   "$id": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/schema.json",
   "title": "Basalt Plugin Registry Index",
   "type": "object",
-  "required": ["version", "updated_at", "plugins"],
+  "required": [
+    "version",
+    "updated_at",
+    "plugins"
+  ],
   "properties": {
     "version": {
       "type": "string",
@@ -16,13 +20,25 @@
     },
     "plugins": {
       "type": "array",
-      "items": { "$ref": "#/definitions/Plugin" }
+      "items": {
+        "$ref": "#/definitions/Plugin"
+      }
     }
   },
   "definitions": {
     "Plugin": {
       "type": "object",
-      "required": ["name", "version", "description", "author", "tags", "capabilities", "hook_flags", "file_globs", "download_url"],
+      "required": [
+        "name",
+        "version",
+        "description",
+        "author",
+        "tags",
+        "capabilities",
+        "hook_flags",
+        "file_globs",
+        "download_url"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -47,14 +63,22 @@
         },
         "tags": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 1
         },
         "capabilities": {
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["DIAGNOSTICS", "PROJECT_MODEL", "HOVER", "AGENT_LAUNCHER"]
+            "enum": [
+              "DIAGNOSTICS",
+              "PROJECT_MODEL",
+              "HOVER",
+              "AGENT_LAUNCHER",
+              "RETRIEVAL"
+            ]
           }
         },
         "hook_flags": {
@@ -64,7 +88,9 @@
         },
         "file_globs": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 1
         },
         "download_url": {
