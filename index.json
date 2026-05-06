@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-06T06:45:04Z",
+  "updated_at": "2026-05-06T07:03:14Z",
   "plugins": [
     {
       "name": "gemini-agent",
@@ -124,7 +124,7 @@
       "version": "0.1.0",
       "description": "Cargo workspace project model provider. Exposes crates, targets, features, and dependency graph for Rust projects.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-cargo-project-model",
       "tags": [
         "rust",
         "cargo",
@@ -137,7 +137,7 @@
       "file_globs": [
         "**/Cargo.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer/releases/download/v0.1.0/cargo_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.0/cargo_project_model.wasm"
     },
     {
       "name": "swift-lsp",
@@ -185,6 +185,29 @@
         "**/*"
       ],
       "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-retrieval/releases/download/v0.1.0/semantic_retrieval.wasm"
+    },
+    {
+      "name": "rust-review-actions",
+      "version": "0.1.0",
+      "description": "Rust review-time actions plugin that lets Basalt run cargo test against speculative workspaces before approval.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-rust-review-actions",
+      "tags": [
+        "rust",
+        "review",
+        "tests",
+        "cargo"
+      ],
+      "capabilities": [
+        "REVIEW_ACTIONS"
+      ],
+      "hook_flags": 8192,
+      "file_globs": [
+        "**/*.rs",
+        "**/Cargo.toml",
+        "**/Cargo.lock"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-rust-review-actions/releases/download/v0.1.0/rust_review_actions.wasm"
     }
   ]
 }

@@ -77,7 +77,8 @@
               "PROJECT_MODEL",
               "HOVER",
               "AGENT_LAUNCHER",
-              "RETRIEVAL"
+              "RETRIEVAL",
+              "REVIEW_ACTIONS"
             ]
           }
         },
