@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T20:05:00Z",
+  "updated_at": "2026-05-07T00:00:00Z",
   "plugins": [
     {
       "name": "gemini-agent",
@@ -13,6 +13,18 @@
       "hook_flags": 1024,
       "file_globs": ["**/*.swift", "**/*.rs", "**/*.ts", "**/*.py"],
       "download_url": "https://github.com/adevcorn/basalt-plugin-gemini-agent/releases/download/v0.1.1/gemini_agent.wasm"
+    },
+    {
+      "name": "gemini-mcp-agent",
+      "version": "0.1.0",
+      "description": "Gemini CLI agent launcher with Basalt MCP server support. Exposes basalt_retrieval_search to the agent via the MCP protocol.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-gemini-mcp-agent",
+      "tags": ["ai", "agent", "gemini", "google", "mcp"],
+      "capabilities": ["AGENT_LAUNCHER"],
+      "hook_flags": 1024,
+      "file_globs": ["**/*"],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gemini-mcp-agent/releases/download/v0.1.0/gemini_mcp_agent.wasm"
     },
     {
       "name": "codex-agent",
@@ -37,6 +49,18 @@
       "hook_flags": 1024,
       "file_globs": ["**/*"],
       "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.1/copilot_agent.wasm"
+    },
+    {
+      "name": "copilot-mcp-agent",
+      "version": "0.1.0",
+      "description": "GitHub Copilot agent launcher with Basalt MCP server support. Exposes basalt_retrieval_search to the agent via the MCP protocol.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-copilot-mcp-agent",
+      "tags": ["ai", "agent", "github", "copilot", "mcp"],
+      "capabilities": ["AGENT_LAUNCHER"],
+      "hook_flags": 1024,
+      "file_globs": ["**/*"],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-mcp-agent/releases/download/v0.1.0/copilot_mcp_agent.wasm"
     },
     {
       "name": "swift-project-model",
