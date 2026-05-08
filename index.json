@@ -12,8 +12,8 @@
       "capabilities": ["SYNTAX_PARSER"],
       "hook_flags": 0,
       "file_globs": ["**/*.rs"],
-      "parser_filename": "rust",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-rust/releases/download/v0.1.0/parser.wasm"
+      "parser_filename": "rs",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-rust/releases/download/v0.1.0/rs.wasm"
     },
     {
       "name": "parser-swift",
@@ -26,7 +26,7 @@
       "hook_flags": 0,
       "file_globs": ["**/*.swift"],
       "parser_filename": "swift",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-swift/releases/download/v0.1.0/parser.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-swift/releases/download/v0.1.0/swift.wasm"
     },
     {
       "name": "parser-c",
@@ -39,7 +39,7 @@
       "hook_flags": 0,
       "file_globs": ["**/*.c", "**/*.h"],
       "parser_filename": "c",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-c/releases/download/v0.1.0/parser.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-c/releases/download/v0.1.0/c.wasm"
     },
     {
       "name": "parser-markdown",
@@ -52,7 +52,7 @@
       "hook_flags": 0,
       "file_globs": ["**/*.md"],
       "parser_filename": "md",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-markdown/releases/download/v0.1.0/parser.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-markdown/releases/download/v0.1.0/md.wasm"
     },
     {
       "name": "parser-toml",
@@ -65,7 +65,7 @@
       "hook_flags": 0,
       "file_globs": ["**/*.toml"],
       "parser_filename": "toml",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-toml/releases/download/v0.1.0/parser.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-toml/releases/download/v0.1.0/toml.wasm"
     },
     {
       "name": "gemini-agent",
