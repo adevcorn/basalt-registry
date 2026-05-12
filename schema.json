@@ -78,7 +78,8 @@
               "HOVER",
               "AGENT_LAUNCHER",
               "RETRIEVAL",
-              "REVIEW_ACTIONS"
+              "REVIEW_ACTIONS",
+              "API_INDEX"
             ]
           }
         },
@@ -98,9 +99,11 @@
           "type": "string",
           "format": "uri",
           "description": "Direct URL to the .wasm plugin binary."
+        },
+        "parser_filename": {
+          "type": "string",
+          "description": "Filename stem used for the tree-sitter grammar file (SYNTAX_PARSER plugins only)."
         }
-      },
-      "additionalProperties": false
+      }
     }
-  }
 }
