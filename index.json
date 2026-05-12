@@ -186,7 +186,7 @@
     },
     {
       "name": "copilot-agent",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "description": "GitHub Copilot agent integration providing inline suggestions and chat.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-copilot-agent",
@@ -203,7 +203,7 @@
       "file_globs": [
         "**/*"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.4/copilot_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.5/copilot_agent.wasm"
     },
     {
       "name": "copilot-mcp-agent",
