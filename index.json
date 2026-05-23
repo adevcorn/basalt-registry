@@ -92,6 +92,56 @@
       "download_url": "https://github.com/adevcorn/basalt-plugin-parser-markdown/releases/download/v0.1.0/md.wasm"
     },
     {
+      "name": "parser-csharp",
+      "version": "0.1.0",
+      "description": "Tree-sitter C# parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .cs files.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-csharp",
+      "tags": [
+        "csharp",
+        "dotnet",
+        "parser",
+        "syntax",
+        "tree-sitter"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.cs"
+      ],
+      "parser_filename": "cs",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-csharp/releases/download/v0.1.0/cs.wasm"
+    },
+    {
+      "name": "semantic-facts-csharp",
+      "version": "0.1.0",
+      "description": "Provides semantic facts (call hierarchy, declarations) for C# by analyzing parser output.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp",
+      "tags": [
+        "csharp",
+        "dotnet",
+        "semantic",
+        "facts",
+        "call-hierarchy"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*.cs"
+      ],
+      "provides": "semantic-facts@csharp/v1",
+      "requires": [
+        "parse.call-sites@csharp/v1",
+        "parse.retrieval@csharp/v1"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp/releases/download/v0.1.0/semantic_facts_csharp.wasm"
+    },
+    {
       "name": "parser-toml",
       "version": "0.1.0",
       "description": "Tree-sitter TOML parser plugin. Provides syntax highlighting and table-based retrieval chunks for .toml files.",
@@ -135,6 +185,7 @@
         "**/*.ts",
         "**/*.py"
       ],
+      "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-gemini-agent/releases/download/v0.1.3/gemini_agent.wasm"
     },
     {
@@ -157,6 +208,7 @@
       "file_globs": [
         "**/*"
       ],
+      "agent_tier": 1,
       "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/gemini-mcp-agent/0.1.0/gemini_mcp_agent.wasm"
     },
     {
@@ -182,6 +234,7 @@
         "**/*.py",
         "**/*.js"
       ],
+      "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-codex-agent/releases/download/v0.1.1/codex_agent.wasm"
     },
     {
@@ -203,6 +256,7 @@
       "file_globs": [
         "**/*"
       ],
+      "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-copilot-agent/releases/download/v0.1.5/copilot_agent.wasm"
     },
     {
@@ -225,6 +279,7 @@
       "file_globs": [
         "**/*"
       ],
+      "agent_tier": 1,
       "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/copilot-mcp-agent/0.1.0/copilot_mcp_agent.wasm"
     },
     {
@@ -410,7 +465,30 @@
         "**/Cargo.toml",
         "**/Cargo.lock"
       ],
+      "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-rust-review-actions/releases/download/v0.1.0/rust_review_actions.wasm"
+    },
+    {
+      "name": "pi-agent",
+      "version": "0.1.0",
+      "description": "Pi coding agent with RPC mode. Supports mid-turn steering, follow-up queuing, extension UI dialogs, and live model switching via bidirectional RPC protocol.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-pi-agent",
+      "tags": [
+        "ai",
+        "agent",
+        "pi",
+        "rpc"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*"
+      ],
+      "agent_tier": 2,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-pi-agent/releases/download/v0.1.0/pi_agent.wasm"
     }
   ]
 }
