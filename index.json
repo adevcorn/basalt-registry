@@ -213,10 +213,10 @@
     },
     {
       "name": "codex-agent",
-      "version": "0.1.1",
-      "description": "OpenAI Codex-powered agent for code generation and refactoring.",
+      "version": "0.1.0",
+      "description": "OpenAI Codex CLI agent launcher plugin for Basalt with model, reasoning effort, and stream JSON parsing.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-codex-agent",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-codex",
       "tags": [
         "ai",
         "agent",
@@ -228,14 +228,10 @@
       ],
       "hook_flags": 1024,
       "file_globs": [
-        "**/*.swift",
-        "**/*.rs",
-        "**/*.ts",
-        "**/*.py",
-        "**/*.js"
+        "**/*"
       ],
-      "agent_tier": 1,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-codex-agent/releases/download/v0.1.1/codex_agent.wasm"
+      "agent_tier": 2,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-codex/releases/download/v0.1.0/codex_agent.wasm"
     },
     {
       "name": "copilot-agent",
