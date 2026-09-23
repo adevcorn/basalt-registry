@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-12T00:00:00Z",
+  "updated_at": "2026-09-23T09:50:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -489,6 +489,163 @@
       ],
       "agent_tier": 2,
       "download_url": "https://github.com/adevcorn/basalt-plugin-pi-agent/releases/download/v0.1.0/pi_agent.wasm"
+    },
+    {
+      "name": "parser-typescript",
+      "version": "0.1.0",
+      "description": "Tree-sitter TypeScript and TSX parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .ts, .tsx, .mts, and .cts files.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-typescript",
+      "tags": [
+        "typescript",
+        "tsx",
+        "react",
+        "javascript",
+        "parser",
+        "syntax",
+        "tree-sitter"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.mts",
+        "**/*.cts"
+      ],
+      "parser_filename": "ts",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.1.0/ts.wasm"
+    },
+    {
+      "name": "parser-yaml",
+      "version": "0.1.0",
+      "description": "Tree-sitter YAML parser plugin. Provides syntax highlighting and key-based retrieval chunks for .yaml and .yml files.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-yaml",
+      "tags": [
+        "yaml",
+        "parser",
+        "syntax",
+        "tree-sitter"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.yaml",
+        "**/*.yml"
+      ],
+      "parser_filename": "yaml",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-yaml/releases/download/v0.1.0/yaml.wasm"
+    },
+    {
+      "name": "project-model-yarn-workspaces",
+      "version": "0.1.0",
+      "description": "Yarn Workspaces and Lerna project model provider. Exposes packages, targets, and dependency graph for TypeScript/JavaScript monorepos.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces",
+      "tags": [
+        "yarn",
+        "lerna",
+        "monorepo",
+        "workspaces",
+        "project-model",
+        "typescript",
+        "javascript"
+      ],
+      "capabilities": [
+        "PROJECT_MODEL"
+      ],
+      "hook_flags": 256,
+      "file_globs": [
+        "**/package.json",
+        "**/lerna.json"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.0/project_model_yarn_workspaces.wasm"
+    },
+    {
+      "name": "semantic-facts-typescript",
+      "version": "0.1.0",
+      "description": "Provides semantic facts (symbol declarations, call hierarchy, imports) for TypeScript and TSX by analyzing parser output.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-typescript",
+      "tags": [
+        "typescript",
+        "tsx",
+        "react",
+        "semantic",
+        "facts",
+        "call-hierarchy"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.mts",
+        "**/*.cts"
+      ],
+      "provides": "semantic-facts@ts/v1",
+      "requires": [
+        "parse.call-sites@ts/v1",
+        "parse.retrieval@ts/v1"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-typescript/releases/download/v0.1.0/semantic_facts_typescript.wasm"
+    },
+    {
+      "name": "backstage-catalog",
+      "version": "0.1.0",
+      "description": "Spotify Backstage catalog entity validator and domain index provider. Validates catalog-info.yaml entities and links them to TypeScript source code.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-backstage-catalog",
+      "tags": [
+        "backstage",
+        "catalog",
+        "api-index",
+        "diagnostics",
+        "yaml",
+        "spotify"
+      ],
+      "capabilities": [
+        "API_INDEX",
+        "DIAGNOSTICS"
+      ],
+      "hook_flags": 16385,
+      "file_globs": [
+        "**/catalog-info.yaml",
+        "**/catalog-info.yml"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-backstage-catalog/releases/download/v0.1.0/backstage_catalog.wasm"
+    },
+    {
+      "name": "agent-backstage-yarn",
+      "version": "0.1.0",
+      "description": "Yarn and Backstage CLI agent launcher with review actions support (test, build, lint, backstage-cli).",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn",
+      "tags": [
+        "yarn",
+        "backstage",
+        "agent",
+        "review-actions",
+        "build",
+        "test"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER",
+        "REVIEW_ACTIONS"
+      ],
+      "hook_flags": 9216,
+      "file_globs": [
+        "**/package.json"
+      ],
+      "agent_tier": 2,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn/releases/download/v0.1.0/agent_backstage_yarn.wasm"
     }
   ]
 }
