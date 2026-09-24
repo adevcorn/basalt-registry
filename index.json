@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-24T08:40:00Z",
+  "updated_at": "2026-09-24T09:50:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -213,7 +213,7 @@
     },
     {
       "name": "codex-agent",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "OpenAI Codex CLI agent launcher plugin for Basalt with model, reasoning effort, and stream JSON parsing.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-codex",
@@ -231,7 +231,7 @@
         "**/*"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-codex/releases/download/v0.2.0/codex_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-codex/releases/download/v0.2.1/codex_agent.wasm"
     },
     {
       "name": "copilot-agent",
