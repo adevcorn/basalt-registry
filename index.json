@@ -486,28 +486,6 @@
       "download_url": "https://github.com/adevcorn/basalt-plugin-rust-review-actions/releases/download/v0.1.0/rust_review_actions.wasm"
     },
     {
-      "name": "pi-agent",
-      "version": "0.1.0",
-      "description": "Pi coding agent with RPC mode. Supports mid-turn steering, follow-up queuing, extension UI dialogs, and live model switching via bidirectional RPC protocol.",
-      "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-pi-agent",
-      "tags": [
-        "ai",
-        "agent",
-        "pi",
-        "rpc"
-      ],
-      "capabilities": [
-        "AGENT_LAUNCHER"
-      ],
-      "hook_flags": 1024,
-      "file_globs": [
-        "**/*"
-      ],
-      "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-pi-agent/releases/download/v0.1.0/pi_agent.wasm"
-    },
-    {
       "name": "parser-typescript",
       "version": "0.1.0",
       "description": "Tree-sitter TypeScript and TSX parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .ts, .tsx, .mts, and .cts files.",
