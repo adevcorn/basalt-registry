@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-23T09:50:00Z",
+  "updated_at": "2026-09-26T12:43:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -642,6 +642,50 @@
       ],
       "agent_tier": 2,
       "download_url": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn/releases/download/v0.1.0/agent_backstage_yarn.wasm"
+    },
+    {
+      "name": "antigravity-agent",
+      "version": "0.1.0",
+      "description": "Google Antigravity (AGY) CLI agent launcher plugin for Basalt with model/variant options, streaming parser, and Basalt MCP tool enforcement.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-antigravity",
+      "tags": [
+        "ai",
+        "agent",
+        "antigravity",
+        "google",
+        "mcp"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*"
+      ],
+      "agent_tier": 1,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-antigravity/releases/download/v0.1.0/antigravity_agent.wasm"
+    },
+    {
+      "name": "opencode-agent",
+      "version": "0.1.0",
+      "description": "OpenCode AI agent launcher plugin for Basalt with model/variant support and stateful streaming parser.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-opencode",
+      "tags": [
+        "ai",
+        "agent",
+        "opencode"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*"
+      ],
+      "agent_tier": 1,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-opencode/releases/download/v0.1.0/opencode_agent.wasm"
     }
   ]
-}
+}
