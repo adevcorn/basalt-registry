@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-26T12:43:00Z",
+  "updated_at": "2026-09-26T18:40:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -686,6 +686,29 @@
       ],
       "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-agent-antigravity/releases/download/v0.1.0/antigravity_agent.wasm"
+    },
+    {
+      "name": "rust-ecs-inspector",
+      "version": "0.1.0",
+      "description": "Tier-1 Rust ECS inspector plugin for Bevy applications in Basalt. Analyzes systems, query access patterns, and mutable resource conflicts.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-inspector-rust-ecs",
+      "tags": [
+        "rust",
+        "ecs",
+        "bevy",
+        "inspector",
+        "diagnostics"
+      ],
+      "capabilities": [
+        "DIAGNOSTICS",
+        "HOVER"
+      ],
+      "hook_flags": 5,
+      "file_globs": [
+        "**/*.rs"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-inspector-rust-ecs/releases/download/v0.1.0/rust_ecs.wasm"
     }
   ]
 }
