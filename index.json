@@ -213,7 +213,7 @@
     },
     {
       "name": "codex-agent",
-      "version": "0.1.0",
+      "version": "0.2.1",
       "description": "OpenAI Codex CLI agent launcher plugin for Basalt with model, reasoning effort, and stream JSON parsing.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-codex",
@@ -231,7 +231,28 @@
         "**/*"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-codex/releases/download/v0.1.0/codex_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-codex/releases/download/v0.2.1/codex_agent.wasm"
+    },
+    {
+      "name": "opencode-agent",
+      "version": "0.1.0",
+      "description": "OpenCode AI agent launcher plugin for Basalt with model/variant support and stateful stream JSON parsing.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-opencode",
+      "tags": [
+        "ai",
+        "agent",
+        "opencode"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER"
+      ],
+      "hook_flags": 1024,
+      "file_globs": [
+        "**/*"
+      ],
+      "agent_tier": 2,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-opencode/releases/download/v0.1.0/opencode_agent.wasm"
     },
     {
       "name": "copilot-agent",
@@ -665,27 +686,6 @@
       ],
       "agent_tier": 1,
       "download_url": "https://github.com/adevcorn/basalt-plugin-agent-antigravity/releases/download/v0.1.0/antigravity_agent.wasm"
-    },
-    {
-      "name": "opencode-agent",
-      "version": "0.1.0",
-      "description": "OpenCode AI agent launcher plugin for Basalt with model/variant support and stateful streaming parser.",
-      "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-opencode",
-      "tags": [
-        "ai",
-        "agent",
-        "opencode"
-      ],
-      "capabilities": [
-        "AGENT_LAUNCHER"
-      ],
-      "hook_flags": 1024,
-      "file_globs": [
-        "**/*"
-      ],
-      "agent_tier": 1,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-opencode/releases/download/v0.1.0/opencode_agent.wasm"
     }
   ]
-}
+}
