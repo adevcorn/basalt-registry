@@ -79,7 +79,9 @@
               "AGENT_LAUNCHER",
               "RETRIEVAL",
               "REVIEW_ACTIONS",
-              "API_INDEX"
+              "API_INDEX",
+              "SYNTAX_PARSER",
+              "SEMANTIC_FACTS"
             ]
           }
         },
