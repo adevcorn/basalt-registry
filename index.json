@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-26T18:53:00Z",
+  "updated_at": "2026-10-01T13:34:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -487,7 +487,7 @@
     },
     {
       "name": "parser-typescript",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Tree-sitter TypeScript and TSX parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .ts, .tsx, .mts, and .cts files.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-parser-typescript",
@@ -511,7 +511,7 @@
         "**/*.cts"
       ],
       "parser_filename": "ts",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.1.0/ts.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.1.1/ts.wasm"
     },
     {
       "name": "parser-yaml",
