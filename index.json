@@ -907,7 +907,7 @@
     },
     {
       "name": "agent-add-helper-workflow",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Add Helper workflow agent launcher with gleam format/test gates and warnings when models.gleam and Models.kt drift apart.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-add-helper-workflow",
@@ -922,16 +922,17 @@
       "capabilities": [
         "AGENT_LAUNCHER",
         "REVIEW_ACTIONS",
-        "DIAGNOSTICS"
+        "DIAGNOSTICS",
+        "SHADOW_EXCLUDES"
       ],
-      "hook_flags": 9217,
+      "hook_flags": 33563649,
       "file_globs": [
         "**/models.gleam",
         "**/Models.kt",
         "**/gleam.toml"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-add-helper-workflow/releases/download/v0.1.0/agent_add_helper_workflow.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-add-helper-workflow/releases/download/v0.1.1/agent_add_helper_workflow.wasm"
     },
     {
       "name": "tier0-interval",
