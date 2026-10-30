@@ -81,7 +81,11 @@
               "REVIEW_ACTIONS",
               "API_INDEX",
               "SYNTAX_PARSER",
-              "SEMANTIC_FACTS"
+              "SEMANTIC_FACTS",
+              "BUILD_SYSTEM",
+              "TEST_RUNNER",
+              "TIER0",
+              "SHADOW_EXCLUDES"
             ]
           }
         },

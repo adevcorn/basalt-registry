@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-10-01T13:34:00Z",
+  "updated_at": "2026-10-30T00:00:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -301,7 +301,7 @@
     },
     {
       "name": "swift-project-model",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Swift package and Xcode project model provider. Exposes targets, products, and dependency graph.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-swift-project-model",
@@ -311,16 +311,17 @@
         "project-model"
       ],
       "capabilities": [
-        "PROJECT_MODEL"
+        "PROJECT_MODEL",
+        "SHADOW_EXCLUDES"
       ],
-      "hook_flags": 256,
+      "hook_flags": 33554688,
       "file_globs": [
         "**/*.swift",
         "**/Package.swift",
         "**/*.xcodeproj/**",
         "**/*.xcworkspace/**"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.0/swift_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.1/swift_project_model.wasm"
     },
     {
       "name": "lsp-rust-analyzer",
@@ -348,7 +349,7 @@
     },
     {
       "name": "cargo-project-model",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Cargo workspace project model provider. Exposes crates, targets, features, and dependency graph for Rust projects.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-cargo-project-model",
@@ -358,13 +359,14 @@
         "project-model"
       ],
       "capabilities": [
-        "PROJECT_MODEL"
+        "PROJECT_MODEL",
+        "SHADOW_EXCLUDES"
       ],
-      "hook_flags": 256,
+      "hook_flags": 33554688,
       "file_globs": [
         "**/Cargo.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.0/cargo_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.1/cargo_project_model.wasm"
     },
     {
       "name": "swift-lsp",
@@ -394,7 +396,7 @@
     },
     {
       "name": "dotnet-project-model",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "MSBuild / .NET project model provider. Exposes solutions, projects, targets, and dependency graph for C#, F#, and VB.NET workspaces.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model",
@@ -405,9 +407,10 @@
         "msbuild"
       ],
       "capabilities": [
-        "PROJECT_MODEL"
+        "PROJECT_MODEL",
+        "SHADOW_EXCLUDES"
       ],
-      "hook_flags": 256,
+      "hook_flags": 33554688,
       "file_globs": [
         "**/*.sln",
         "**/*.slnx",
@@ -415,7 +418,7 @@
         "**/*.fsproj",
         "**/*.vbproj"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model/releases/download/v0.1.0/dotnet_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model/releases/download/v0.1.1/dotnet_project_model.wasm"
     },
     {
       "name": "dotnet-api-index",
@@ -538,7 +541,7 @@
     },
     {
       "name": "project-model-yarn-workspaces",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Yarn Workspaces and Lerna project model provider. Exposes packages, targets, and dependency graph for TypeScript/JavaScript monorepos.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces",
@@ -552,14 +555,15 @@
         "javascript"
       ],
       "capabilities": [
-        "PROJECT_MODEL"
+        "PROJECT_MODEL",
+        "SHADOW_EXCLUDES"
       ],
-      "hook_flags": 256,
+      "hook_flags": 33554688,
       "file_globs": [
         "**/package.json",
         "**/lerna.json"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.0/project_model_yarn_workspaces.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.1/project_model_yarn_workspaces.wasm"
     },
     {
       "name": "semantic-facts-typescript",
@@ -712,6 +716,255 @@
       ],
       "provides": "semantic-facts@rust/v1",
       "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-rust/releases/download/v0.1.0/semantic_facts_rust.wasm"
+    },
+    {
+      "name": "parser-gleam",
+      "version": "0.1.0",
+      "description": "Tree-sitter Gleam parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .gleam files.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-gleam",
+      "tags": [
+        "gleam",
+        "beam",
+        "parser",
+        "syntax",
+        "tree-sitter"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.gleam"
+      ],
+      "parser_filename": "gleam",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-gleam/releases/download/v0.1.0/gleam.wasm"
+    },
+    {
+      "name": "parser-kotlin",
+      "version": "0.1.0",
+      "description": "Tree-sitter Kotlin parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .kt and .kts files.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-kotlin",
+      "tags": [
+        "kotlin",
+        "android",
+        "parser",
+        "syntax",
+        "tree-sitter"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kt",
+        "**/*.kts"
+      ],
+      "parser_filename": "kt",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-kotlin/releases/download/v0.1.0/kt.wasm"
+    },
+    {
+      "name": "gleam-project-model",
+      "version": "0.1.1",
+      "description": "Gleam package project model provider. Exposes package metadata, source/test/build roots, and runs gleam build, gleam test, and formatting gates.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-gleam-project-model",
+      "tags": [
+        "gleam",
+        "beam",
+        "project-model",
+        "build",
+        "test"
+      ],
+      "capabilities": [
+        "PROJECT_MODEL",
+        "BUILD_SYSTEM",
+        "TEST_RUNNER",
+        "REVIEW_ACTIONS",
+        "SHADOW_EXCLUDES"
+      ],
+      "hook_flags": 36708608,
+      "file_globs": [
+        "**/gleam.toml",
+        "**/manifest.toml",
+        "**/*.gleam"
+      ],
+      "provides": "project-model:gleam",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gleam-project-model/releases/download/v0.1.1/gleam_project_model.wasm"
+    },
+    {
+      "name": "gradle-android-project-model",
+      "version": "0.1.1",
+      "description": "Gradle / Android project model provider. Exposes modules, Android manifests, AIDL usage, and runs assembleDebug, testDebugUnitTest, and lintDebug.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model",
+      "tags": [
+        "gradle",
+        "android",
+        "kotlin",
+        "project-model",
+        "build",
+        "test"
+      ],
+      "capabilities": [
+        "PROJECT_MODEL",
+        "BUILD_SYSTEM",
+        "TEST_RUNNER",
+        "REVIEW_ACTIONS",
+        "SHADOW_EXCLUDES"
+      ],
+      "hook_flags": 36708608,
+      "file_globs": [
+        "**/settings.gradle.kts",
+        "**/settings.gradle",
+        "**/build.gradle.kts",
+        "**/build.gradle",
+        "**/AndroidManifest.xml",
+        "**/*.aidl"
+      ],
+      "provides": "project-model:gradle-android",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model/releases/download/v0.1.1/gradle_android_project_model.wasm"
+    },
+    {
+      "name": "semantic-facts-gleam",
+      "version": "0.1.0",
+      "description": "Provides semantic facts (declarations, calls, imports, I/O effects) for Gleam by consuming parser output.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-gleam",
+      "tags": [
+        "gleam",
+        "beam",
+        "semantic",
+        "facts",
+        "call-hierarchy"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS"
+      ],
+      "hook_flags": 196608,
+      "file_globs": [
+        "**/*.gleam"
+      ],
+      "provides": "semantic-facts@gleam/v1",
+      "requires": [
+        "parse.call-sites@gleam/v1",
+        "parse.retrieval@gleam/v1"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-gleam/releases/download/v0.1.0/semantic_facts_gleam.wasm"
+    },
+    {
+      "name": "semantic-facts-kotlin",
+      "version": "0.1.0",
+      "description": "Provides semantic facts (classes, functions, imports, coroutine boundaries, I/O effects) for Kotlin by consuming parser output.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-kotlin",
+      "tags": [
+        "kotlin",
+        "android",
+        "semantic",
+        "facts",
+        "call-hierarchy"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS"
+      ],
+      "hook_flags": 196608,
+      "file_globs": [
+        "**/*.kt"
+      ],
+      "provides": "semantic-facts@kotlin/v1",
+      "requires": [
+        "parse.call-sites@kt/v1",
+        "parse.retrieval@kt/v1"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-kotlin/releases/download/v0.1.0/semantic_facts_kotlin.wasm"
+    },
+    {
+      "name": "lsp-gleam",
+      "version": "0.1.0",
+      "description": "Gleam language-server bridge backed by gleam lsp, providing project-scoped diagnostics and hover documentation.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-lsp-gleam",
+      "tags": [
+        "gleam",
+        "beam",
+        "lsp",
+        "diagnostics",
+        "hover"
+      ],
+      "capabilities": [
+        "DIAGNOSTICS",
+        "HOVER"
+      ],
+      "hook_flags": 513,
+      "file_globs": [
+        "**/*.gleam",
+        "**/gleam.toml",
+        "**/manifest.toml"
+      ],
+      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-gleam/releases/download/v0.1.0/lsp_gleam.wasm"
+    },
+    {
+      "name": "agent-add-helper-workflow",
+      "version": "0.1.0",
+      "description": "Add Helper workflow agent launcher with gleam format/test gates and warnings when models.gleam and Models.kt drift apart.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-add-helper-workflow",
+      "tags": [
+        "gleam",
+        "kotlin",
+        "android",
+        "agent",
+        "review-actions",
+        "diagnostics"
+      ],
+      "capabilities": [
+        "AGENT_LAUNCHER",
+        "REVIEW_ACTIONS",
+        "DIAGNOSTICS"
+      ],
+      "hook_flags": 9217,
+      "file_globs": [
+        "**/models.gleam",
+        "**/Models.kt",
+        "**/gleam.toml"
+      ],
+      "agent_tier": 2,
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-add-helper-workflow/releases/download/v0.1.0/agent_add_helper_workflow.wasm"
+    },
+    {
+      "name": "tier0-interval",
+      "version": "0.1.0",
+      "description": "Tier-0 interval abstract interpreter provider for Basalt. Detects division-by-zero, out-of-bounds indexing, overflow, and unwrap hazards in Rust, TypeScript/JavaScript, and Python.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-tier0-interval",
+      "tags": [
+        "tier0",
+        "abstract-interpretation",
+        "verification",
+        "rust",
+        "typescript",
+        "python"
+      ],
+      "capabilities": [
+        "TIER0"
+      ],
+      "hook_flags": 16908288,
+      "file_globs": [
+        "**/*.rs",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.mjs",
+        "**/*.cjs",
+        "**/*.mts",
+        "**/*.cts",
+        "**/*.py"
+      ],
+      "provides": "tier0@rust/v1\ntier0@typescript/v1\ntier0@javascript/v1\ntier0@python/v1",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-tier0-interval/releases/download/v0.1.0/tier0_interval.wasm"
     }
   ]
 }
