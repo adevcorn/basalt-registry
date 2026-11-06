@@ -177,12 +177,52 @@
             <div class="cap-check-dot"></div>
             <span class="cap-check-label">PROJECT_MODEL</span>
           </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="REVIEW_ACTIONS">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">REVIEW_ACTIONS</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="API_INDEX">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">API_INDEX</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="SEMANTIC_FACTS">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">SEMANTIC_FACTS</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="BUILD_SYSTEM">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">BUILD_SYSTEM</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="TEST_RUNNER">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">TEST_RUNNER</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="TIER0">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">TIER0</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="SYNTAX_PARSER">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">SYNTAX_PARSER</span>
+          </label>
+          <label class="cap-check">
+            <input type="checkbox" name="cap" value="RETRIEVAL">
+            <div class="cap-check-dot"></div>
+            <span class="cap-check-label">RETRIEVAL</span>
+          </label>
         </div>
         <div class="field" style="margin-top:14px">
           <label>hook_flags <span class="hint">auto-computed, or override manually</span></label>
           <input type="text" id="f-hook-flags" class="mono" placeholder="1024" autocomplete="off">
           <div style="font-size:0.74rem;color:var(--text-3);margin-top:4px">
-            DIAGNOSTICS=1, PROJECT_MODEL=256, HOVER=512, AGENT_LAUNCHER=1024
+            DIAGNOSTICS=1, PROJECT_MODEL=256, HOVER=512, AGENT_LAUNCHER=1024, REVIEW_ACTIONS=8192, API_INDEX=16384, SEMANTIC_FACTS=65536, BUILD_SYSTEM=1048576, TEST_RUNNER=2097152, TIER0=16777216
           </div>
         </div>
       </div>
@@ -282,6 +322,14 @@
       PROJECT_MODEL:  256,
       HOVER:          512,
       AGENT_LAUNCHER: 1024,
+      REVIEW_ACTIONS: 8192,
+      API_INDEX:      16384,
+      SEMANTIC_FACTS: 65536,
+      BUILD_SYSTEM:   1048576,
+      TEST_RUNNER:    2097152,
+      TIER0:          16777216,
+      SYNTAX_PARSER:  0,
+      RETRIEVAL:      0,
     };
 
     // ── DOM ─────────────────────────────────────────────────────────────────
