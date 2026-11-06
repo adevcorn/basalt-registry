@@ -93,7 +93,7 @@
     },
     {
       "name": "parser-csharp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Tree-sitter C# parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .cs files.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-parser-csharp",
@@ -112,7 +112,7 @@
         "**/*.cs"
       ],
       "parser_filename": "cs",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-csharp/releases/download/v0.1.0/cs.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-csharp/releases/download/v0.1.1/cs.wasm"
     },
     {
       "name": "semantic-facts-csharp",
@@ -490,7 +490,7 @@
     },
     {
       "name": "parser-typescript",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "description": "Tree-sitter TypeScript and TSX parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .ts, .tsx, .mts, and .cts files.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-parser-typescript",
@@ -514,11 +514,11 @@
         "**/*.cts"
       ],
       "parser_filename": "ts",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.1.2/ts.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.1.3/ts.wasm"
     },
     {
       "name": "parser-yaml",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Tree-sitter YAML parser plugin. Provides syntax highlighting and key-based retrieval chunks for .yaml and .yml files.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-parser-yaml",
@@ -537,7 +537,7 @@
         "**/*.yml"
       ],
       "parser_filename": "yaml",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-yaml/releases/download/v0.1.0/yaml.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-yaml/releases/download/v0.1.1/yaml.wasm"
     },
     {
       "name": "project-model-yarn-workspaces",
