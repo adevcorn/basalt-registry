@@ -88,11 +88,16 @@ jobs:
                           capture_output=True, text=True
                       )
                       os.unlink(tmp.name)
-                      if "basalt_plugin_metadata" not in result.stdout:
-                          print(f"MISSING EXPORT: {name} does not export basalt_plugin_metadata")
+                      # Capability plugins export `basalt_plugin_metadata`; tree-sitter
+                      # parsers export `basalt_plugin_parser_<lang>` instead.
+                      if (
+                          "basalt_plugin_metadata" not in result.stdout
+                          and "basalt_plugin_parser_" not in result.stdout
+                      ):
+                          print(f"MISSING EXPORT: {name} exports neither basalt_plugin_metadata nor basalt_plugin_parser_<lang>")
                           failed.append(name)
                       else:
-                          print(f"OK: {name} exports basalt_plugin_metadata")
+                          print(f"OK: {name} exports a Basalt plugin entry point")
               except Exception as e:
                   print(f"ERROR checking {name}: {e}")
                   failed.append(name)
