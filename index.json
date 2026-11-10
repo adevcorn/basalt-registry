@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-06T18:00:00Z",
+  "updated_at": "2026-11-10T00:00:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -116,7 +116,7 @@
     },
     {
       "name": "semantic-facts-csharp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Provides semantic facts (call hierarchy, declarations) for C# by analyzing parser output.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp",
@@ -139,7 +139,7 @@
         "parse.call-sites@csharp/v1",
         "parse.retrieval@csharp/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp/releases/download/v0.1.0/semantic_facts_csharp.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp/releases/download/v0.1.1/semantic_facts_csharp.wasm"
     },
     {
       "name": "parser-toml",
@@ -235,7 +235,7 @@
     },
     {
       "name": "opencode-agent",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "OpenCode AI agent launcher plugin for Basalt with model/variant support and stateful stream JSON parsing.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-opencode",
@@ -252,7 +252,7 @@
         "**/*"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-opencode/releases/download/v0.1.0/opencode_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-opencode/releases/download/v0.1.1/opencode_agent.wasm"
     },
     {
       "name": "copilot-agent",
@@ -648,7 +648,7 @@
     },
     {
       "name": "antigravity-agent",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Google Antigravity (AGY) CLI agent launcher plugin for Basalt with model/variant options, streaming parser, and Basalt MCP tool enforcement.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-antigravity",
@@ -667,7 +667,7 @@
         "**/*"
       ],
       "agent_tier": 1,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-antigravity/releases/download/v0.1.0/antigravity_agent.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-antigravity/releases/download/v0.1.1/antigravity_agent.wasm"
     },
     {
       "name": "rust-ecs-inspector",
@@ -966,6 +966,53 @@
       ],
       "provides": "tier0@rust/v1\ntier0@typescript/v1\ntier0@javascript/v1\ntier0@python/v1",
       "download_url": "https://github.com/adevcorn/basalt-plugin-tier0-interval/releases/download/v0.1.0/tier0_interval.wasm"
+    },
+    {
+      "name": "swarm-budget",
+      "version": "0.1.0",
+      "description": "Budget-aware swarm strategy plugin with successive-halving orchestration, per-peer model routing, and cost telemetry.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-swarm-budget",
+      "tags": [
+        "swarm",
+        "strategy",
+        "budget",
+        "orchestration",
+        "cost",
+        "models"
+      ],
+      "capabilities": [
+        "SWARM_STRATEGY"
+      ],
+      "hook_flags": 8519680,
+      "file_globs": [
+        "**/*"
+      ],
+      "provides": "swarm-strategy:budget_aware\nswarm-strategy:budget-aware\nswarm:successive-halving",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swarm-budget/releases/download/v0.1.0/swarm_budget.wasm"
+    },
+    {
+      "name": "swarm-competitive",
+      "version": "0.1.0",
+      "description": "Reference swarm strategy plugin implementing speculative competitive racing with semantic telemetry and category-based tool scoping.",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-swarm-competitive",
+      "tags": [
+        "swarm",
+        "strategy",
+        "competitive",
+        "racing",
+        "telemetry"
+      ],
+      "capabilities": [
+        "SWARM_STRATEGY"
+      ],
+      "hook_flags": 8519680,
+      "file_globs": [
+        "**/*"
+      ],
+      "provides": "swarm-strategy:competitive@v1\nswarm:speculative-race@v1",
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swarm-competitive/releases/download/v0.1.0/swarm_competitive.wasm"
     }
   ]
 }
