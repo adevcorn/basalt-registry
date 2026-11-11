@@ -86,7 +86,8 @@
               "TEST_RUNNER",
               "TIER0",
               "SWARM_STRATEGY",
-              "SHADOW_EXCLUDES"
+              "SHADOW_EXCLUDES",
+              "SHADOW_SYMLINKS"
             ]
           }
         },

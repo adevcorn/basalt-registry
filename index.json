@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-10T00:00:00Z",
+  "updated_at": "2026-11-11T00:00:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -301,7 +301,7 @@
     },
     {
       "name": "swift-project-model",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Swift package and Xcode project model provider. Exposes targets, products, and dependency graph.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-swift-project-model",
@@ -312,16 +312,17 @@
       ],
       "capabilities": [
         "PROJECT_MODEL",
-        "SHADOW_EXCLUDES"
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 33554688,
+      "hook_flags": 100663552,
       "file_globs": [
         "**/*.swift",
         "**/Package.swift",
         "**/*.xcodeproj/**",
         "**/*.xcworkspace/**"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.1/swift_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.2/swift_project_model.wasm"
     },
     {
       "name": "lsp-rust-analyzer",
@@ -349,7 +350,7 @@
     },
     {
       "name": "cargo-project-model",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Cargo workspace project model provider. Exposes crates, targets, features, and dependency graph for Rust projects.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-cargo-project-model",
@@ -360,13 +361,14 @@
       ],
       "capabilities": [
         "PROJECT_MODEL",
-        "SHADOW_EXCLUDES"
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 33554688,
+      "hook_flags": 100663552,
       "file_globs": [
         "**/Cargo.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.1/cargo_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.2/cargo_project_model.wasm"
     },
     {
       "name": "swift-lsp",
@@ -396,7 +398,7 @@
     },
     {
       "name": "dotnet-project-model",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "MSBuild / .NET project model provider. Exposes solutions, projects, targets, and dependency graph for C#, F#, and VB.NET workspaces.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model",
@@ -408,9 +410,13 @@
       ],
       "capabilities": [
         "PROJECT_MODEL",
-        "SHADOW_EXCLUDES"
+        "REVIEW_ACTIONS",
+        "BUILD_SYSTEM",
+        "TEST_RUNNER",
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 33554688,
+      "hook_flags": 103817472,
       "file_globs": [
         "**/*.sln",
         "**/*.slnx",
@@ -418,7 +424,7 @@
         "**/*.fsproj",
         "**/*.vbproj"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model/releases/download/v0.1.1/dotnet_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model/releases/download/v0.1.2/dotnet_project_model.wasm"
     },
     {
       "name": "dotnet-api-index",
@@ -546,7 +552,7 @@
     },
     {
       "name": "project-model-yarn-workspaces",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Yarn Workspaces and Lerna project model provider. Exposes packages, targets, and dependency graph for TypeScript/JavaScript monorepos.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces",
@@ -561,14 +567,15 @@
       ],
       "capabilities": [
         "PROJECT_MODEL",
-        "SHADOW_EXCLUDES"
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 33554688,
+      "hook_flags": 100663552,
       "file_globs": [
         "**/package.json",
         "**/lerna.json"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.1/project_model_yarn_workspaces.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.2/project_model_yarn_workspaces.wasm"
     },
     {
       "name": "semantic-facts-typescript",
@@ -777,7 +784,7 @@
     },
     {
       "name": "gleam-project-model",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Gleam package project model provider. Exposes package metadata, source/test/build roots, and runs gleam build, gleam test, and formatting gates.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-gleam-project-model",
@@ -793,20 +800,21 @@
         "BUILD_SYSTEM",
         "TEST_RUNNER",
         "REVIEW_ACTIONS",
-        "SHADOW_EXCLUDES"
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 36708608,
+      "hook_flags": 103817472,
       "file_globs": [
         "**/gleam.toml",
         "**/manifest.toml",
         "**/*.gleam"
       ],
       "provides": "project-model:gleam",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-gleam-project-model/releases/download/v0.1.1/gleam_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gleam-project-model/releases/download/v0.1.2/gleam_project_model.wasm"
     },
     {
       "name": "gradle-android-project-model",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Gradle / Android project model provider. Exposes modules, Android manifests, AIDL usage, and runs assembleDebug, testDebugUnitTest, and lintDebug.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model",
@@ -823,9 +831,10 @@
         "BUILD_SYSTEM",
         "TEST_RUNNER",
         "REVIEW_ACTIONS",
-        "SHADOW_EXCLUDES"
+        "SHADOW_EXCLUDES",
+        "SHADOW_SYMLINKS"
       ],
-      "hook_flags": 36708608,
+      "hook_flags": 103817472,
       "file_globs": [
         "**/settings.gradle.kts",
         "**/settings.gradle",
@@ -835,7 +844,7 @@
         "**/*.aidl"
       ],
       "provides": "project-model:gradle-android",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model/releases/download/v0.1.1/gradle_android_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model/releases/download/v0.1.2/gradle_android_project_model.wasm"
     },
     {
       "name": "semantic-facts-gleam",
