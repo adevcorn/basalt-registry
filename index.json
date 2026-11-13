@@ -1,13 +1,13 @@
 {
   "version": "1",
-  "updated_at": "2026-11-13T08:09:03Z",
+  "updated_at": "2026-11-13T11:25:58Z",
   "plugins": [
     {
       "name": "parser-rust",
       "version": "0.1.0",
       "description": "Tree-sitter Rust parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .rs files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-rust",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "parser",
@@ -22,14 +22,17 @@
         "**/*.rs"
       ],
       "parser_filename": "rs",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-rust/releases/download/v0.1.0/rs.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rs.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "2ac0e8d38ee2e62f0198df59ed38db7401d7d639acb92fa7b3c60f69d9e70b11"
     },
     {
       "name": "parser-swift",
       "version": "0.1.0",
       "description": "Tree-sitter Swift parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .swift files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-swift",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "swift",
         "parser",
@@ -44,14 +47,17 @@
         "**/*.swift"
       ],
       "parser_filename": "swift",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-swift/releases/download/v0.1.0/swift.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "5e7d3a926a72a84513c1a4b2186922317a0391c61f3c954801b60d7b33e1c012"
     },
     {
       "name": "parser-c",
       "version": "0.1.0",
       "description": "Tree-sitter C parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .c and .h files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-c",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "c",
         "parser",
@@ -67,14 +73,17 @@
         "**/*.h"
       ],
       "parser_filename": "c",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-c/releases/download/v0.1.0/c.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/c.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "39941b4ff45efe1713cd0d891503bbe4312eecbe0234a5e3b8431f091a60675f"
     },
     {
       "name": "parser-markdown",
       "version": "0.1.0",
       "description": "Tree-sitter Markdown parser plugin. Provides syntax highlighting and heading-based retrieval chunks for .md files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-markdown",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "markdown",
         "parser",
@@ -89,14 +98,17 @@
         "**/*.md"
       ],
       "parser_filename": "md",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-markdown/releases/download/v0.1.0/md.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/md.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "bc99fe2d6b616f7caf8afd8015f68a1bcd4397bfd191b2644abd39427572274a"
     },
     {
       "name": "parser-csharp",
       "version": "0.1.1",
       "description": "Tree-sitter C# parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .cs files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-csharp",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "csharp",
         "dotnet",
@@ -112,14 +124,17 @@
         "**/*.cs"
       ],
       "parser_filename": "cs",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-csharp/releases/download/v0.1.1/cs.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cs.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "77d543ee0c0d13a6bb4ee1c33d0b7dd67c43e9a781184e1041e3cacb29dffae2"
     },
     {
       "name": "semantic-facts-csharp",
       "version": "0.1.1",
       "description": "Provides semantic facts (call hierarchy, declarations) for C# by analyzing parser output.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "csharp",
         "dotnet",
@@ -139,14 +154,17 @@
         "parse.call-sites@csharp/v1",
         "parse.retrieval@csharp/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-csharp/releases/download/v0.1.1/semantic_facts_csharp.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_csharp.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "9a6a8a8977bcc8b680e3d388f6710b778aa2d94101a850894ef05775c61542f7"
     },
     {
       "name": "parser-toml",
       "version": "0.1.0",
       "description": "Tree-sitter TOML parser plugin. Provides syntax highlighting and table-based retrieval chunks for .toml files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-toml",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "toml",
         "parser",
@@ -161,7 +179,10 @@
         "**/*.toml"
       ],
       "parser_filename": "toml",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-toml/releases/download/v0.1.0/toml.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/toml.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "74f61ac353a7beb70f2ab2fcea7d9c57e78f2b4fa7e13876c0d946643bda5bdc"
     },
     {
       "name": "gemini-agent",
@@ -304,7 +325,7 @@
       "version": "0.1.2",
       "description": "Swift package and Xcode project model provider. Exposes targets, products, and dependency graph.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-swift-project-model",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "swift",
         "xcode",
@@ -322,14 +343,20 @@
         "**/*.xcodeproj/**",
         "**/*.xcworkspace/**"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-project-model/releases/download/v0.1.2/swift_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift_project_model.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "2d833e49406044a1fdb81163218c7522eaed0b8faba5c9946bf579d3d6eb5e96",
+      "aliases": [
+        "project-model-swift"
+      ]
     },
     {
       "name": "lsp-rust-analyzer",
       "version": "0.1.0",
       "description": "Rust Analyzer LSP bridge providing diagnostics, hover docs, and completions for Rust projects.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "lsp",
@@ -346,14 +373,17 @@
         "**/Cargo.toml",
         "**/Cargo.lock"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-rust-analyzer/releases/download/v0.1.0/lsp_rust_analyzer.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/lsp_rust_analyzer.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "f5ced3033045031d32082c2a35f1514c058dd30a9863a927d7090414a8ce4d8e"
     },
     {
       "name": "cargo-project-model",
       "version": "0.1.2",
       "description": "Cargo workspace project model provider. Exposes crates, targets, features, and dependency graph for Rust projects.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-cargo-project-model",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "cargo",
@@ -368,14 +398,20 @@
       "file_globs": [
         "**/Cargo.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-cargo-project-model/releases/download/v0.1.2/cargo_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cargo_project_model.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "a00a26194863f95d379e441904143991c5cd9132b021786c419327a0e0d3a3a9",
+      "aliases": [
+        "project-model-cargo"
+      ]
     },
     {
       "name": "swift-lsp",
       "version": "0.1.0",
       "description": "Swift language-server bridge backed by sourcekit-lsp, providing project activation, diagnostics, and hover documentation.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-swift-lsp",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "swift",
         "lsp",
@@ -394,14 +430,20 @@
         "**/*.swift",
         "Package.swift"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-swift-lsp/releases/download/v0.1.0/swift_lsp.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift_lsp.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "7a91f3b0354371ff45d3d220be79af5ffa357f3f5c1bcef5a76e0e0265339ffe",
+      "aliases": [
+        "lsp-swift"
+      ]
     },
     {
       "name": "dotnet-project-model",
       "version": "0.1.2",
       "description": "MSBuild / .NET project model provider. Exposes solutions, projects, targets, and dependency graph for C#, F#, and VB.NET workspaces.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "dotnet",
         "csharp",
@@ -424,14 +466,20 @@
         "**/*.fsproj",
         "**/*.vbproj"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-project-model/releases/download/v0.1.2/dotnet_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/dotnet_project_model.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "e990e71c0b87b033b9ec27d14bbaae21e5f64638e6f1640a692045dd9e5b9d12",
+      "aliases": [
+        "project-model-dotnet"
+      ]
     },
     {
       "name": "dotnet-api-index",
       "version": "0.1.0",
       "description": "API index provider for .NET projects. Surfaces controllers, endpoints, and public types for grounding and retrieval.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-dotnet-api-index",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "dotnet",
         "csharp",
@@ -447,14 +495,20 @@
         "**/*.fs",
         "**/*.vb"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-dotnet-api-index/releases/download/v0.1.0/dotnet_api_index.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/dotnet_api_index.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "948a67029fb283da125869003d10d57060e7b42e0e442156ec5152fd43af6950",
+      "aliases": [
+        "api-index-dotnet"
+      ]
     },
     {
       "name": "semantic-retrieval",
       "version": "0.1.0",
       "description": "Opt-in semantic retrieval capability plugin that enables embedding-based grounding and related-file suggestions in Basalt.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-retrieval",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "retrieval",
         "embeddings",
@@ -468,14 +522,17 @@
       "file_globs": [
         "**/*"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-retrieval/releases/download/v0.1.0/semantic_retrieval.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_retrieval.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "a1da744287fb7955f24f92b4bbf2f0e59a6f97e5bfc74f17b3c283e0c6c646e8"
     },
     {
       "name": "rust-review-actions",
       "version": "0.1.0",
       "description": "Rust review-time actions plugin that lets Basalt run cargo test against speculative workspaces before approval.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-rust-review-actions",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "review",
@@ -492,14 +549,20 @@
         "**/Cargo.lock"
       ],
       "agent_tier": 1,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-rust-review-actions/releases/download/v0.1.0/rust_review_actions.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rust_review_actions.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "cdfef08a774d0bffe6b90387e05699464acb1ad24214a66db2aed5bc4072c172",
+      "aliases": [
+        "review-actions-rust"
+      ]
     },
     {
       "name": "parser-typescript",
       "version": "0.2.0",
       "description": "Tree-sitter parser plugin for the ECMAScript family. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for TypeScript (ts/mts/cts) and JavaScript/JSX (tsx/js/jsx/mjs/cjs) with per-file grammar selection.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-typescript",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "typescript",
         "tsx",
@@ -525,14 +588,17 @@
         "**/*.cjs"
       ],
       "parser_filename": "ts",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-typescript/releases/download/v0.2.0/ts.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/ts.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "5b9cc4ab4e2f99fa944c76c282aab972686161216e63e55701f009535c66aa12"
     },
     {
       "name": "parser-yaml",
       "version": "0.1.1",
       "description": "Tree-sitter YAML parser plugin. Provides syntax highlighting and key-based retrieval chunks for .yaml and .yml files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-yaml",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "yaml",
         "parser",
@@ -548,14 +614,17 @@
         "**/*.yml"
       ],
       "parser_filename": "yaml",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-yaml/releases/download/v0.1.1/yaml.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/yaml.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "dc9564257eb301b03c6773edd8fc5e77a6319f79a4d65817b37f363fd812921d"
     },
     {
       "name": "project-model-yarn-workspaces",
       "version": "0.1.2",
       "description": "Yarn Workspaces and Lerna project model provider. Exposes packages, targets, and dependency graph for TypeScript/JavaScript monorepos.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "yarn",
         "lerna",
@@ -575,14 +644,17 @@
         "**/package.json",
         "**/lerna.json"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-project-model-yarn-workspaces/releases/download/v0.1.2/project_model_yarn_workspaces.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/project_model_yarn_workspaces.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "7e838221be196c2c6a4ef566a5a9b9f1d28c5fe915bdaf6a1020753d559f4e2a"
     },
     {
       "name": "semantic-facts-typescript",
       "version": "0.2.0",
       "description": "Provides semantic facts (symbol declarations, call hierarchy, imports) for the ECMAScript family (TypeScript, TSX, JavaScript, JSX), selecting the TS or TSX parser grammar per file.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-typescript",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "typescript",
         "tsx",
@@ -612,14 +684,17 @@
         "parse.call-sites@ts/v1",
         "parse.retrieval@ts/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-typescript/releases/download/v0.2.0/semantic_facts_typescript.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_typescript.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "1c2122416c16e46d09c739bcf74ba9fc2ad8429b9ef57241c999c18502375ef2"
     },
     {
       "name": "backstage-catalog",
       "version": "0.1.0",
       "description": "Spotify Backstage catalog entity validator and domain index provider. Validates catalog-info.yaml entities and links them to TypeScript source code.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-backstage-catalog",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "backstage",
         "catalog",
@@ -637,14 +712,17 @@
         "**/catalog-info.yaml",
         "**/catalog-info.yml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-backstage-catalog/releases/download/v0.1.0/backstage_catalog.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/backstage_catalog.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "a040f0d3d9e256b53b46c0bb9b1eec67cb7fe6c41151339f955b058615107e34"
     },
     {
       "name": "agent-backstage-yarn",
       "version": "0.1.1",
       "description": "Yarn and Backstage CLI agent launcher with review actions derived from package.json scripts (non-interactive test, lint, build).",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "yarn",
         "backstage",
@@ -662,7 +740,10 @@
         "**/package.json"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn/releases/download/v0.1.1/agent_backstage_yarn.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/agent_backstage_yarn.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "d664e8fd563cc775919b88a3a65636d5af7c1d5c524521f3ab6c31615e8ed325"
     },
     {
       "name": "antigravity-agent",
@@ -692,7 +773,7 @@
       "version": "0.1.0",
       "description": "Tier-1 Rust ECS inspector plugin for Bevy applications in Basalt. Analyzes systems, query access patterns, and mutable resource conflicts.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-inspector-rust-ecs",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "ecs",
@@ -708,14 +789,17 @@
       "file_globs": [
         "**/*.rs"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-inspector-rust-ecs/releases/download/v0.1.0/rust_ecs.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rust_ecs.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "45b50a097515898b77cde6f8b9d4fd3052036ef27dbce5e60985eba11250fb06"
     },
     {
       "name": "semantic-facts-rust",
       "version": "0.1.0",
       "description": "Rust semantic facts, AST traversal, review actions, and in-process WASM verification probe generator.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-rust",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "rust",
         "semantic",
@@ -733,14 +817,17 @@
         "**/*.rs"
       ],
       "provides": "semantic-facts@rust/v1",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-rust/releases/download/v0.1.0/semantic_facts_rust.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_rust.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "68c46544123414c6157329bc869a21dcc02a67d210af4cc5d34b2bd0bb1caa34"
     },
     {
       "name": "parser-gleam",
       "version": "0.1.0",
       "description": "Tree-sitter Gleam parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .gleam files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-gleam",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "gleam",
         "beam",
@@ -756,14 +843,17 @@
         "**/*.gleam"
       ],
       "parser_filename": "gleam",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-gleam/releases/download/v0.1.0/gleam.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "650c3611a7ab603eb91dfa9f400ed28c761a42c7566709c30b9feb7b58d3a38e"
     },
     {
       "name": "parser-kotlin",
       "version": "0.1.0",
       "description": "Tree-sitter Kotlin parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .kt and .kts files.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-kotlin",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "kotlin",
         "android",
@@ -780,14 +870,17 @@
         "**/*.kts"
       ],
       "parser_filename": "kt",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-parser-kotlin/releases/download/v0.1.0/kt.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/kt.wasm",
+      "kind": "provider",
+      "target": "wasm32-wasip1",
+      "sha256": "00a0d80c909a02635d4577ef526cd419fdd8ce002ce7dc873c929f3355ebdab4"
     },
     {
       "name": "gleam-project-model",
       "version": "0.1.2",
       "description": "Gleam package project model provider. Exposes package metadata, source/test/build roots, and runs gleam build, gleam test, and formatting gates.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-gleam-project-model",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "gleam",
         "beam",
@@ -810,14 +903,20 @@
         "**/*.gleam"
       ],
       "provides": "project-model:gleam",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-gleam-project-model/releases/download/v0.1.2/gleam_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam_project_model.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "f9064fa6f5a712a15a7b9b1085cd6d741dc4f81d624bc2d143e6ec6edf6ac2c9",
+      "aliases": [
+        "project-model-gleam"
+      ]
     },
     {
       "name": "gradle-android-project-model",
       "version": "0.1.2",
       "description": "Gradle / Android project model provider. Exposes modules, Android manifests, AIDL usage, and runs assembleDebug, testDebugUnitTest, and lintDebug.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "gradle",
         "android",
@@ -844,14 +943,20 @@
         "**/*.aidl"
       ],
       "provides": "project-model:gradle-android",
-      "download_url": "https://github.com/adevcorn/basalt-plugin-gradle-android-project-model/releases/download/v0.1.2/gradle_android_project_model.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gradle_android_project_model.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "011f9a8b6cc2a9ae1a16a6ff0984097524e29d81bd81b87db0ddbc3e5da37ebf",
+      "aliases": [
+        "project-model-gradle-android"
+      ]
     },
     {
       "name": "semantic-facts-gleam",
       "version": "0.1.0",
       "description": "Provides semantic facts (declarations, calls, imports, I/O effects) for Gleam by consuming parser output.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-gleam",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "gleam",
         "beam",
@@ -871,14 +976,17 @@
         "parse.call-sites@gleam/v1",
         "parse.retrieval@gleam/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-gleam/releases/download/v0.1.0/semantic_facts_gleam.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_gleam.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "4e2329e9f77c2b1a7532330982e6ee0c9685da5b26725a1b3b91ab119c369000"
     },
     {
       "name": "semantic-facts-kotlin",
       "version": "0.1.0",
       "description": "Provides semantic facts (classes, functions, imports, coroutine boundaries, I/O effects) for Kotlin by consuming parser output.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-kotlin",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "kotlin",
         "android",
@@ -898,14 +1006,17 @@
         "parse.call-sites@kt/v1",
         "parse.retrieval@kt/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-semantic-facts-kotlin/releases/download/v0.1.0/semantic_facts_kotlin.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_kotlin.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "12d48e60b3648dcc76e63a5beb933b3f217b325338c9bf23e1ad0ec2880eb87b"
     },
     {
       "name": "lsp-gleam",
       "version": "0.1.0",
       "description": "Gleam language-server bridge backed by gleam lsp, providing project-scoped diagnostics and hover documentation.",
       "author": "adevcorn",
-      "homepage": "https://github.com/adevcorn/basalt-plugin-lsp-gleam",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
       "tags": [
         "gleam",
         "beam",
@@ -923,7 +1034,10 @@
         "**/gleam.toml",
         "**/manifest.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-plugin-lsp-gleam/releases/download/v0.1.0/lsp_gleam.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/lsp_gleam.wasm",
+      "kind": "provider",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "ddbb6abd5e367c388e192be78979646f239f09011efbeb9048533ada78bce712"
     },
     {
       "name": "agent-add-helper-workflow",
@@ -1033,6 +1147,900 @@
       ],
       "provides": "swarm-strategy:competitive@v1\nswarm:speculative-race@v1",
       "download_url": "https://github.com/adevcorn/basalt-plugin-swarm-competitive/releases/download/v0.1.0/swarm_competitive.wasm"
+    }
+  ],
+  "packs": [
+    {
+      "name": "language-c",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "c language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "c"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.c",
+        "**/*.h",
+        "**/*.hpp",
+        "**/*.hh"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "c.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/c.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "c",
+          "sha256": "39941b4ff45efe1713cd0d891503bbe4312eecbe0234a5e3b8431f091a60675f"
+        }
+      ],
+      "supersedes": [
+        "parser-c"
+      ]
+    },
+    {
+      "name": "language-csharp",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "cs language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "cs"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS",
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.cs"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "cs.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cs.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "cs",
+          "sha256": "77d543ee0c0d13a6bb4ee1c33d0b7dd67c43e9a781184e1041e3cacb29dffae2"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic_facts_csharp.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_csharp.wasm",
+          "target": "wasm32-unknown-unknown",
+          "install_as": "semantic-facts-csharp",
+          "sha256": "9a6a8a8977bcc8b680e3d388f6710b778aa2d94101a850894ef05775c61542f7"
+        }
+      ],
+      "supersedes": [
+        "parser-csharp",
+        "semantic-facts-csharp"
+      ]
+    },
+    {
+      "name": "language-gleam",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "gleam language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "gleam"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS",
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.gleam"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "gleam.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "gleam",
+          "sha256": "650c3611a7ab603eb91dfa9f400ed28c761a42c7566709c30b9feb7b58d3a38e"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic_facts_gleam.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_gleam.wasm",
+          "target": "wasm32-unknown-unknown",
+          "install_as": "semantic-facts-gleam",
+          "sha256": "4e2329e9f77c2b1a7532330982e6ee0c9685da5b26725a1b3b91ab119c369000"
+        }
+      ],
+      "supersedes": [
+        "parser-gleam",
+        "semantic-facts-gleam"
+      ]
+    },
+    {
+      "name": "language-kotlin",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "kt language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "kt"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS",
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kt",
+        "**/*.kts"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "kt.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/kt.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "kt",
+          "sha256": "00a0d80c909a02635d4577ef526cd419fdd8ce002ce7dc873c929f3355ebdab4"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic_facts_kotlin.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_kotlin.wasm",
+          "target": "wasm32-unknown-unknown",
+          "install_as": "semantic-facts-kotlin",
+          "sha256": "12d48e60b3648dcc76e63a5beb933b3f217b325338c9bf23e1ad0ec2880eb87b"
+        }
+      ],
+      "supersedes": [
+        "parser-kotlin",
+        "semantic-facts-kotlin"
+      ]
+    },
+    {
+      "name": "language-markdown",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "md language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "md"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.md"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "md.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/md.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "md",
+          "sha256": "bc99fe2d6b616f7caf8afd8015f68a1bcd4397bfd191b2644abd39427572274a"
+        }
+      ],
+      "supersedes": [
+        "parser-markdown"
+      ]
+    },
+    {
+      "name": "language-rust",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "rs language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "rs"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS",
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.rs"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "rs.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rs.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "rs",
+          "sha256": "2ac0e8d38ee2e62f0198df59ed38db7401d7d639acb92fa7b3c60f69d9e70b11"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic_facts_rust.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_rust.wasm",
+          "target": "wasm32-unknown-unknown",
+          "install_as": "semantic-facts-rust",
+          "sha256": "68c46544123414c6157329bc869a21dcc02a67d210af4cc5d34b2bd0bb1caa34"
+        }
+      ],
+      "supersedes": [
+        "parser-rust",
+        "semantic-facts-rust"
+      ]
+    },
+    {
+      "name": "language-swift",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "swift language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "swift"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.swift"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "swift.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "swift",
+          "sha256": "5e7d3a926a72a84513c1a4b2186922317a0391c61f3c954801b60d7b33e1c012"
+        }
+      ],
+      "supersedes": [
+        "parser-swift"
+      ]
+    },
+    {
+      "name": "language-toml",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "toml language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "toml"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.toml"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "toml.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/toml.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "toml",
+          "sha256": "74f61ac353a7beb70f2ab2fcea7d9c57e78f2b4fa7e13876c0d946643bda5bdc"
+        }
+      ],
+      "supersedes": [
+        "parser-toml"
+      ]
+    },
+    {
+      "name": "language-typescript",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "ts language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "ts"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS",
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.mts",
+        "**/*.cts",
+        "**/*.mjs",
+        "**/*.cjs"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "ts.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/ts.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "ts",
+          "sha256": "5b9cc4ab4e2f99fa944c76c282aab972686161216e63e55701f009535c66aa12"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic_facts_typescript.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_typescript.wasm",
+          "target": "wasm32-unknown-unknown",
+          "install_as": "semantic-facts-typescript",
+          "sha256": "1c2122416c16e46d09c739bcf74ba9fc2ad8429b9ef57241c999c18502375ef2"
+        }
+      ],
+      "supersedes": [
+        "parser-typescript",
+        "semantic-facts-typescript"
+      ]
+    },
+    {
+      "name": "language-yaml",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "yaml language pack: parser and semantic facts",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "language-pack",
+        "yaml"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.yaml",
+        "**/*.yml"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "yaml.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/yaml.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "yaml",
+          "sha256": "dc9564257eb301b03c6773edd8fc5e77a6319f79a4d65817b37f363fd812921d"
+        }
+      ],
+      "supersedes": [
+        "parser-yaml"
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "c-cpp",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "C/C++ language support",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "c-cpp"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.c",
+        "**/*.h",
+        "**/*.hh",
+        "**/*.hpp",
+        "**/CMakeLists.txt",
+        "**/Makefile",
+        "**/compile_commands.json",
+        "**/conanfile.py",
+        "**/conanfile.txt",
+        "**/meson.build",
+        "**/vcpkg.json"
+      ],
+      "markers": [
+        "**/CMakeLists.txt",
+        "**/Makefile",
+        "**/meson.build",
+        "**/compile_commands.json",
+        "**/conanfile.txt",
+        "**/conanfile.py",
+        "**/vcpkg.json"
+      ],
+      "language_globs": [
+        "**/*.c",
+        "**/*.h",
+        "**/*.hpp",
+        "**/*.hh"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-c",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-c"
+      ]
+    },
+    {
+      "name": "dotnet",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": ".NET: C# language support, project model, API index",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "dotnet"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.cs",
+        "**/*.csproj",
+        "**/*.fsproj",
+        "**/*.sln",
+        "**/*.slnx",
+        "**/*.vbproj",
+        "**/Directory.Build.props",
+        "**/global.json"
+      ],
+      "markers": [
+        "**/*.sln",
+        "**/*.slnx",
+        "**/*.csproj",
+        "**/*.fsproj",
+        "**/*.vbproj",
+        "**/global.json",
+        "**/Directory.Build.props"
+      ],
+      "language_globs": [
+        "**/*.cs"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-csharp",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-dotnet",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        },
+        {
+          "name": "api-index-dotnet",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "dotnet-api-index",
+        "dotnet-project-model",
+        "language-csharp"
+      ]
+    },
+    {
+      "name": "gleam",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Gleam: language support, project model, and language server",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "gleam"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.gleam",
+        "**/gleam.toml",
+        "**/manifest.toml"
+      ],
+      "markers": [
+        "**/gleam.toml",
+        "**/manifest.toml"
+      ],
+      "language_globs": [
+        "**/*.gleam"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-gleam",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-gleam",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        },
+        {
+          "name": "lsp-gleam",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "gleam-project-model",
+        "language-gleam",
+        "lsp-gleam"
+      ]
+    },
+    {
+      "name": "kotlin-android",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Kotlin/Android: language support and Gradle project model",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "kotlin-android"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kt",
+        "**/*.kts",
+        "**/AndroidManifest.xml",
+        "**/build.gradle",
+        "**/build.gradle.kts",
+        "**/gradle.properties",
+        "**/settings.gradle",
+        "**/settings.gradle.kts"
+      ],
+      "markers": [
+        "**/settings.gradle",
+        "**/settings.gradle.kts",
+        "**/build.gradle",
+        "**/build.gradle.kts",
+        "**/gradle.properties",
+        "**/AndroidManifest.xml"
+      ],
+      "language_globs": [
+        "**/*.kt",
+        "**/*.kts"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-kotlin",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-gradle-android",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "gradle-android-project-model",
+        "language-kotlin"
+      ]
+    },
+    {
+      "name": "markdown",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Markdown language support",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "markdown"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.md"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/*.md"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-markdown",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-markdown"
+      ]
+    },
+    {
+      "name": "rust",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Rust: language support, Cargo model, review actions, and rust-analyzer",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "rust"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.rs",
+        "**/Cargo.lock",
+        "**/Cargo.toml",
+        "**/rust-toolchain.toml"
+      ],
+      "markers": [
+        "**/Cargo.toml",
+        "**/Cargo.lock",
+        "**/rust-toolchain.toml"
+      ],
+      "language_globs": [
+        "**/*.rs"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-rust",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-cargo",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        },
+        {
+          "name": "review-actions-rust",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        },
+        {
+          "name": "lsp-rust-analyzer",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "cargo-project-model",
+        "language-rust",
+        "lsp-rust-analyzer",
+        "rust-review-actions"
+      ]
+    },
+    {
+      "name": "swift",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Swift: language support, project model, and SourceKit-LSP",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "swift"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.swift",
+        "**/*.xcodeproj/project.pbxproj",
+        "**/*.xcworkspace/contents.xcworkspacedata",
+        "**/Package.swift",
+        "**/Podfile"
+      ],
+      "markers": [
+        "**/Package.swift",
+        "**/*.xcodeproj/project.pbxproj",
+        "**/*.xcworkspace/contents.xcworkspacedata",
+        "**/Podfile"
+      ],
+      "language_globs": [
+        "**/*.swift"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-swift",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-swift",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        },
+        {
+          "name": "lsp-swift",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-swift",
+        "swift-lsp",
+        "swift-project-model"
+      ]
+    },
+    {
+      "name": "toml",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "TOML language support",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "toml"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.toml"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/*.toml"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-toml",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-toml"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "TypeScript/JavaScript: language support and Yarn workspace model",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "web"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.cjs",
+        "**/*.cts",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.mjs",
+        "**/*.mts",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/bun.lockb",
+        "**/package-lock.json",
+        "**/package.json",
+        "**/pnpm-lock.yaml",
+        "**/tsconfig.json",
+        "**/yarn.lock"
+      ],
+      "markers": [
+        "**/package.json",
+        "**/tsconfig.json",
+        "**/yarn.lock",
+        "**/pnpm-lock.yaml",
+        "**/package-lock.json",
+        "**/bun.lockb"
+      ],
+      "language_globs": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.mts",
+        "**/*.cts",
+        "**/*.mjs",
+        "**/*.cjs"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-typescript",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "project-model-yarn-workspaces",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-typescript",
+        "project-model-yarn-workspaces"
+      ]
+    },
+    {
+      "name": "yaml",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "YAML language support",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "yaml"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.yaml",
+        "**/*.yml"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/*.yaml",
+        "**/*.yml"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "language-yaml",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [
+        "language-yaml"
+      ]
     }
   ]
 }
