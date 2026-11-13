@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-11T00:00:00Z",
+  "updated_at": "2026-11-13T08:09:03Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -641,8 +641,8 @@
     },
     {
       "name": "agent-backstage-yarn",
-      "version": "0.1.0",
-      "description": "Yarn and Backstage CLI agent launcher with review actions support (test, build, lint, backstage-cli).",
+      "version": "0.1.1",
+      "description": "Yarn and Backstage CLI agent launcher with review actions derived from package.json scripts (non-interactive test, lint, build).",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn",
       "tags": [
@@ -662,7 +662,7 @@
         "**/package.json"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn/releases/download/v0.1.0/agent_backstage_yarn.wasm"
+      "download_url": "https://github.com/adevcorn/basalt-plugin-agent-backstage-yarn/releases/download/v0.1.1/agent_backstage_yarn.wasm"
     },
     {
       "name": "antigravity-agent",
