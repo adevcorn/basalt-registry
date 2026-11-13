@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-13T11:25:58Z",
+  "updated_at": "2026-11-13T12:38:35Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -22,10 +22,10 @@
         "**/*.rs"
       ],
       "parser_filename": "rs",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rs.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/rs.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "2ac0e8d38ee2e62f0198df59ed38db7401d7d639acb92fa7b3c60f69d9e70b11"
+      "sha256": "c500e6a13c8b2d8bd8893731d6de51f690793d0c900c9484cbaf158bc0647cd2"
     },
     {
       "name": "parser-swift",
@@ -47,10 +47,10 @@
         "**/*.swift"
       ],
       "parser_filename": "swift",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/swift.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "5e7d3a926a72a84513c1a4b2186922317a0391c61f3c954801b60d7b33e1c012"
+      "sha256": "8aa07a3f6ba29f7f834f6ad916fc33cfff5db85208641d7471451a6270014f56"
     },
     {
       "name": "parser-c",
@@ -73,10 +73,10 @@
         "**/*.h"
       ],
       "parser_filename": "c",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/c.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/c.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "39941b4ff45efe1713cd0d891503bbe4312eecbe0234a5e3b8431f091a60675f"
+      "sha256": "c83362de625eb74e9c97207b6cd107cbd1390fd12f5c4c2f6bfa280929bdbae4"
     },
     {
       "name": "parser-markdown",
@@ -98,10 +98,10 @@
         "**/*.md"
       ],
       "parser_filename": "md",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/md.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/md.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "bc99fe2d6b616f7caf8afd8015f68a1bcd4397bfd191b2644abd39427572274a"
+      "sha256": "6bb16081d669b929d1db71b5fd2e31aa395e1ae8579827f968348b5e6f848005"
     },
     {
       "name": "parser-csharp",
@@ -124,10 +124,10 @@
         "**/*.cs"
       ],
       "parser_filename": "cs",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cs.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/cs.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "77d543ee0c0d13a6bb4ee1c33d0b7dd67c43e9a781184e1041e3cacb29dffae2"
+      "sha256": "fbffc7cd6e1a732f1d943957a0aaf0f11fbee540cf67afcd27f1882c2b99dff3"
     },
     {
       "name": "semantic-facts-csharp",
@@ -154,10 +154,10 @@
         "parse.call-sites@csharp/v1",
         "parse.retrieval@csharp/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_csharp.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_csharp.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
-      "sha256": "9a6a8a8977bcc8b680e3d388f6710b778aa2d94101a850894ef05775c61542f7"
+      "sha256": "a5e70809a7cc88040bb5f5e746e2d76f137b682c172ad0018d7ab9118358f6cf"
     },
     {
       "name": "parser-toml",
@@ -179,10 +179,10 @@
         "**/*.toml"
       ],
       "parser_filename": "toml",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/toml.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/toml.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "74f61ac353a7beb70f2ab2fcea7d9c57e78f2b4fa7e13876c0d946643bda5bdc"
+      "sha256": "2a0317334b1bc567ee907f25c8a8deb559fb2f33f31996e99f4560532cf06dc1"
     },
     {
       "name": "gemini-agent",
@@ -343,7 +343,7 @@
         "**/*.xcodeproj/**",
         "**/*.xcworkspace/**"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift_project_model.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/swift_project_model.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "2d833e49406044a1fdb81163218c7522eaed0b8faba5c9946bf579d3d6eb5e96",
@@ -373,7 +373,7 @@
         "**/Cargo.toml",
         "**/Cargo.lock"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/lsp_rust_analyzer.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/lsp_rust_analyzer.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "f5ced3033045031d32082c2a35f1514c058dd30a9863a927d7090414a8ce4d8e"
@@ -398,7 +398,7 @@
       "file_globs": [
         "**/Cargo.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cargo_project_model.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/cargo_project_model.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "a00a26194863f95d379e441904143991c5cd9132b021786c419327a0e0d3a3a9",
@@ -420,7 +420,6 @@
         "hover"
       ],
       "capabilities": [
-        "PROJECT_MODEL",
         "DIAGNOSTICS",
         "HOVER"
       ],
@@ -430,7 +429,7 @@
         "**/*.swift",
         "Package.swift"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift_lsp.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/swift_lsp.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "7a91f3b0354371ff45d3d220be79af5ffa357f3f5c1bcef5a76e0e0265339ffe",
@@ -466,7 +465,7 @@
         "**/*.fsproj",
         "**/*.vbproj"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/dotnet_project_model.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/dotnet_project_model.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "e990e71c0b87b033b9ec27d14bbaae21e5f64638e6f1640a692045dd9e5b9d12",
@@ -495,7 +494,7 @@
         "**/*.fs",
         "**/*.vb"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/dotnet_api_index.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/dotnet_api_index.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "948a67029fb283da125869003d10d57060e7b42e0e442156ec5152fd43af6950",
@@ -522,7 +521,7 @@
       "file_globs": [
         "**/*"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_retrieval.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_retrieval.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "a1da744287fb7955f24f92b4bbf2f0e59a6f97e5bfc74f17b3c283e0c6c646e8"
@@ -549,7 +548,7 @@
         "**/Cargo.lock"
       ],
       "agent_tier": 1,
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rust_review_actions.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/rust_review_actions.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "cdfef08a774d0bffe6b90387e05699464acb1ad24214a66db2aed5bc4072c172",
@@ -588,10 +587,10 @@
         "**/*.cjs"
       ],
       "parser_filename": "ts",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/ts.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/ts.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "5b9cc4ab4e2f99fa944c76c282aab972686161216e63e55701f009535c66aa12"
+      "sha256": "6bc1190f0599f59576b7de2a32da893a690fd4f8d510cbeb54dcbcdeb391012a"
     },
     {
       "name": "parser-yaml",
@@ -614,10 +613,10 @@
         "**/*.yml"
       ],
       "parser_filename": "yaml",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/yaml.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/yaml.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "dc9564257eb301b03c6773edd8fc5e77a6319f79a4d65817b37f363fd812921d"
+      "sha256": "e92a8c99428806302bceb14c8f6d51f4acba75f638d3d6164da0fe70a9d29a1a"
     },
     {
       "name": "project-model-yarn-workspaces",
@@ -644,7 +643,7 @@
         "**/package.json",
         "**/lerna.json"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/project_model_yarn_workspaces.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/project_model_yarn_workspaces.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "7e838221be196c2c6a4ef566a5a9b9f1d28c5fe915bdaf6a1020753d559f4e2a"
@@ -684,10 +683,10 @@
         "parse.call-sites@ts/v1",
         "parse.retrieval@ts/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_typescript.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_typescript.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
-      "sha256": "1c2122416c16e46d09c739bcf74ba9fc2ad8429b9ef57241c999c18502375ef2"
+      "sha256": "a364af1b1945108ce60da6fca5635aa0c368e6f417bd9a348a77b862e5b48a70"
     },
     {
       "name": "backstage-catalog",
@@ -712,7 +711,7 @@
         "**/catalog-info.yaml",
         "**/catalog-info.yml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/backstage_catalog.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/backstage_catalog.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "a040f0d3d9e256b53b46c0bb9b1eec67cb7fe6c41151339f955b058615107e34"
@@ -740,7 +739,7 @@
         "**/package.json"
       ],
       "agent_tier": 2,
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/agent_backstage_yarn.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/agent_backstage_yarn.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "d664e8fd563cc775919b88a3a65636d5af7c1d5c524521f3ab6c31615e8ed325"
@@ -789,14 +788,14 @@
       "file_globs": [
         "**/*.rs"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rust_ecs.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/rust_ecs.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "45b50a097515898b77cde6f8b9d4fd3052036ef27dbce5e60985eba11250fb06"
     },
     {
       "name": "semantic-facts-rust",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Rust semantic facts, AST traversal, review actions, and in-process WASM verification probe generator.",
       "author": "adevcorn",
       "homepage": "https://github.com/adevcorn/basalt-languages",
@@ -817,10 +816,10 @@
         "**/*.rs"
       ],
       "provides": "semantic-facts@rust/v1",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_rust.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_rust.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
-      "sha256": "68c46544123414c6157329bc869a21dcc02a67d210af4cc5d34b2bd0bb1caa34"
+      "sha256": "ce6a1a3711d4185b840b431f70140f2bf4cf1931f288efd6d7cb57b99b294839"
     },
     {
       "name": "parser-gleam",
@@ -843,10 +842,10 @@
         "**/*.gleam"
       ],
       "parser_filename": "gleam",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/gleam.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "650c3611a7ab603eb91dfa9f400ed28c761a42c7566709c30b9feb7b58d3a38e"
+      "sha256": "790c2f7e1917708964653656e8af16212205a36268d8015afd5943a3cf34afdc"
     },
     {
       "name": "parser-kotlin",
@@ -870,10 +869,10 @@
         "**/*.kts"
       ],
       "parser_filename": "kt",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/kt.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/kt.wasm",
       "kind": "provider",
       "target": "wasm32-wasip1",
-      "sha256": "00a0d80c909a02635d4577ef526cd419fdd8ce002ce7dc873c929f3355ebdab4"
+      "sha256": "1476d5f12fc27301f796e74823fa84fd6bca40b8e30605675b8e2119c7d7932d"
     },
     {
       "name": "gleam-project-model",
@@ -903,7 +902,7 @@
         "**/*.gleam"
       ],
       "provides": "project-model:gleam",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam_project_model.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/gleam_project_model.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "f9064fa6f5a712a15a7b9b1085cd6d741dc4f81d624bc2d143e6ec6edf6ac2c9",
@@ -943,7 +942,7 @@
         "**/*.aidl"
       ],
       "provides": "project-model:gradle-android",
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gradle_android_project_model.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/gradle_android_project_model.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "011f9a8b6cc2a9ae1a16a6ff0984097524e29d81bd81b87db0ddbc3e5da37ebf",
@@ -976,10 +975,10 @@
         "parse.call-sites@gleam/v1",
         "parse.retrieval@gleam/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_gleam.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_gleam.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
-      "sha256": "4e2329e9f77c2b1a7532330982e6ee0c9685da5b26725a1b3b91ab119c369000"
+      "sha256": "b15940af69f7b2826b2cc405f385c8fb0814775d3c89759653cd379a0541e723"
     },
     {
       "name": "semantic-facts-kotlin",
@@ -1006,10 +1005,10 @@
         "parse.call-sites@kt/v1",
         "parse.retrieval@kt/v1"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_kotlin.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_kotlin.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
-      "sha256": "12d48e60b3648dcc76e63a5beb933b3f217b325338c9bf23e1ad0ec2880eb87b"
+      "sha256": "a893b374c6a767cf73d7199e3142c1dfdb8d71234db389aef3416b9604b5911c"
     },
     {
       "name": "lsp-gleam",
@@ -1034,7 +1033,7 @@
         "**/gleam.toml",
         "**/manifest.toml"
       ],
-      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/lsp_gleam.wasm",
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/lsp_gleam.wasm",
       "kind": "provider",
       "target": "wasm32-unknown-unknown",
       "sha256": "ddbb6abd5e367c388e192be78979646f239f09011efbeb9048533ada78bce712"
@@ -1175,10 +1174,10 @@
         {
           "kind": "parser",
           "artifact": "c.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/c.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/c.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "c",
-          "sha256": "39941b4ff45efe1713cd0d891503bbe4312eecbe0234a5e3b8431f091a60675f"
+          "sha256": "c83362de625eb74e9c97207b6cd107cbd1390fd12f5c4c2f6bfa280929bdbae4"
         }
       ],
       "supersedes": [
@@ -1208,18 +1207,18 @@
         {
           "kind": "parser",
           "artifact": "cs.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/cs.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/cs.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "cs",
-          "sha256": "77d543ee0c0d13a6bb4ee1c33d0b7dd67c43e9a781184e1041e3cacb29dffae2"
+          "sha256": "fbffc7cd6e1a732f1d943957a0aaf0f11fbee540cf67afcd27f1882c2b99dff3"
         },
         {
           "kind": "plugin",
           "artifact": "semantic_facts_csharp.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_csharp.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_csharp.wasm",
           "target": "wasm32-unknown-unknown",
           "install_as": "semantic-facts-csharp",
-          "sha256": "9a6a8a8977bcc8b680e3d388f6710b778aa2d94101a850894ef05775c61542f7"
+          "sha256": "a5e70809a7cc88040bb5f5e746e2d76f137b682c172ad0018d7ab9118358f6cf"
         }
       ],
       "supersedes": [
@@ -1250,18 +1249,18 @@
         {
           "kind": "parser",
           "artifact": "gleam.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/gleam.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/gleam.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "gleam",
-          "sha256": "650c3611a7ab603eb91dfa9f400ed28c761a42c7566709c30b9feb7b58d3a38e"
+          "sha256": "790c2f7e1917708964653656e8af16212205a36268d8015afd5943a3cf34afdc"
         },
         {
           "kind": "plugin",
           "artifact": "semantic_facts_gleam.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_gleam.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_gleam.wasm",
           "target": "wasm32-unknown-unknown",
           "install_as": "semantic-facts-gleam",
-          "sha256": "4e2329e9f77c2b1a7532330982e6ee0c9685da5b26725a1b3b91ab119c369000"
+          "sha256": "b15940af69f7b2826b2cc405f385c8fb0814775d3c89759653cd379a0541e723"
         }
       ],
       "supersedes": [
@@ -1293,18 +1292,18 @@
         {
           "kind": "parser",
           "artifact": "kt.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/kt.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/kt.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "kt",
-          "sha256": "00a0d80c909a02635d4577ef526cd419fdd8ce002ce7dc873c929f3355ebdab4"
+          "sha256": "1476d5f12fc27301f796e74823fa84fd6bca40b8e30605675b8e2119c7d7932d"
         },
         {
           "kind": "plugin",
           "artifact": "semantic_facts_kotlin.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_kotlin.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_kotlin.wasm",
           "target": "wasm32-unknown-unknown",
           "install_as": "semantic-facts-kotlin",
-          "sha256": "12d48e60b3648dcc76e63a5beb933b3f217b325338c9bf23e1ad0ec2880eb87b"
+          "sha256": "a893b374c6a767cf73d7199e3142c1dfdb8d71234db389aef3416b9604b5911c"
         }
       ],
       "supersedes": [
@@ -1334,10 +1333,10 @@
         {
           "kind": "parser",
           "artifact": "md.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/md.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/md.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "md",
-          "sha256": "bc99fe2d6b616f7caf8afd8015f68a1bcd4397bfd191b2644abd39427572274a"
+          "sha256": "6bb16081d669b929d1db71b5fd2e31aa395e1ae8579827f968348b5e6f848005"
         }
       ],
       "supersedes": [
@@ -1367,18 +1366,18 @@
         {
           "kind": "parser",
           "artifact": "rs.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/rs.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/rs.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "rs",
-          "sha256": "2ac0e8d38ee2e62f0198df59ed38db7401d7d639acb92fa7b3c60f69d9e70b11"
+          "sha256": "c500e6a13c8b2d8bd8893731d6de51f690793d0c900c9484cbaf158bc0647cd2"
         },
         {
           "kind": "plugin",
           "artifact": "semantic_facts_rust.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_rust.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_rust.wasm",
           "target": "wasm32-unknown-unknown",
           "install_as": "semantic-facts-rust",
-          "sha256": "68c46544123414c6157329bc869a21dcc02a67d210af4cc5d34b2bd0bb1caa34"
+          "sha256": "ce6a1a3711d4185b840b431f70140f2bf4cf1931f288efd6d7cb57b99b294839"
         }
       ],
       "supersedes": [
@@ -1408,10 +1407,10 @@
         {
           "kind": "parser",
           "artifact": "swift.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/swift.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/swift.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "swift",
-          "sha256": "5e7d3a926a72a84513c1a4b2186922317a0391c61f3c954801b60d7b33e1c012"
+          "sha256": "8aa07a3f6ba29f7f834f6ad916fc33cfff5db85208641d7471451a6270014f56"
         }
       ],
       "supersedes": [
@@ -1440,10 +1439,10 @@
         {
           "kind": "parser",
           "artifact": "toml.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/toml.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/toml.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "toml",
-          "sha256": "74f61ac353a7beb70f2ab2fcea7d9c57e78f2b4fa7e13876c0d946643bda5bdc"
+          "sha256": "2a0317334b1bc567ee907f25c8a8deb559fb2f33f31996e99f4560532cf06dc1"
         }
       ],
       "supersedes": [
@@ -1480,18 +1479,18 @@
         {
           "kind": "parser",
           "artifact": "ts.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/ts.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/ts.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "ts",
-          "sha256": "5b9cc4ab4e2f99fa944c76c282aab972686161216e63e55701f009535c66aa12"
+          "sha256": "6bc1190f0599f59576b7de2a32da893a690fd4f8d510cbeb54dcbcdeb391012a"
         },
         {
           "kind": "plugin",
           "artifact": "semantic_facts_typescript.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/semantic_facts_typescript.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_facts_typescript.wasm",
           "target": "wasm32-unknown-unknown",
           "install_as": "semantic-facts-typescript",
-          "sha256": "1c2122416c16e46d09c739bcf74ba9fc2ad8429b9ef57241c999c18502375ef2"
+          "sha256": "a364af1b1945108ce60da6fca5635aa0c368e6f417bd9a348a77b862e5b48a70"
         }
       ],
       "supersedes": [
@@ -1522,10 +1521,10 @@
         {
           "kind": "parser",
           "artifact": "yaml.wasm",
-          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.0/yaml.wasm",
+          "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/yaml.wasm",
           "target": "wasm32-wasip1",
           "parser_filename": "yaml",
-          "sha256": "dc9564257eb301b03c6773edd8fc5e77a6319f79a4d65817b37f363fd812921d"
+          "sha256": "e92a8c99428806302bceb14c8f6d51f4acba75f638d3d6164da0fe70a9d29a1a"
         }
       ],
       "supersedes": [
