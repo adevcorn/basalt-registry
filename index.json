@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-13T12:38:35Z",
+  "updated_at": "2026-11-13T12:43:07Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -2040,6 +2040,113 @@
       "supersedes": [
         "language-yaml"
       ]
+    },
+    {
+      "name": "backstage",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Backstage: catalog API index, diagnostics, and agent launcher",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "backstage"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/catalog-info.yaml",
+        "**/catalog-info.yml"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/catalog-info.yaml",
+        "**/catalog-info.yml"
+      ],
+      "require_language_files": false,
+      "members": [
+        {
+          "name": "backstage-catalog",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        },
+        {
+          "name": "agent-backstage-yarn",
+          "version": "^0.1",
+          "required": false,
+          "recommended": true
+        }
+      ],
+      "supersedes": [],
+      "addon": true
+    },
+    {
+      "name": "rust-ecs",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Rust ECS inspector add-on for Bevy projects",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "rust-ecs"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.rs"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/*.rs"
+      ],
+      "require_language_files": true,
+      "members": [
+        {
+          "name": "rust-ecs-inspector",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [],
+      "addon": true
+    },
+    {
+      "name": "semantic-retrieval",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Language-agnostic semantic retrieval add-on",
+      "author": "adevcorn",
+      "homepage": "https://github.com/adevcorn/basalt-languages",
+      "tags": [
+        "preset",
+        "semantic-retrieval"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*"
+      ],
+      "markers": [],
+      "language_globs": [
+        "**/*"
+      ],
+      "require_language_files": false,
+      "members": [
+        {
+          "name": "semantic-retrieval",
+          "version": "^0.1",
+          "required": true,
+          "recommended": true
+        }
+      ],
+      "supersedes": [],
+      "download_url": "https://github.com/adevcorn/basalt-languages/releases/download/v0.1.1/semantic_retrieval.wasm",
+      "target": "wasm32-unknown-unknown",
+      "sha256": "a1da744287fb7955f24f92b4bbf2f0e59a6f97e5bfc74f17b3c283e0c6c646e8",
+      "addon": true
     }
   ]
 }

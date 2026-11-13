@@ -182,6 +182,11 @@
       "type": "string"
      },
      "description": "Legacy plugin names replaced by this entry."
+    },
+    "addon": {
+     "type": "boolean",
+     "default": false,
+     "description": "Preset that is not a language default (framework/tool add-on). Never auto-installed."
     }
    },
    "anyOf": [
