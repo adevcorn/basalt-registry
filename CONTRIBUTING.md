@@ -36,7 +36,7 @@ Thank you for contributing a plugin! Follow the steps below to get your plugin l
 
    Valid `capabilities` values: `DIAGNOSTICS`, `PROJECT_MODEL`, `HOVER`, `AGENT_LAUNCHER`,
    `RETRIEVAL`, `REVIEW_ACTIONS`, `API_INDEX`, `SYNTAX_PARSER`, `SEMANTIC_FACTS`,
-   `BUILD_SYSTEM`, `TEST_RUNNER`, `TIER0`, `SWARM_STRATEGY`, `SHADOW_EXCLUDES`.
+   `BUILD_SYSTEM`, `TEST_RUNNER`, `TIER0`, `SHADOW_EXCLUDES`.
 
 5. **Open a Pull Request** targeting `main`. CI will automatically:
    - Validate the JSON schema

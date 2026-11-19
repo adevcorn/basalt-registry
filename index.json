@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-11-13T12:43:07Z",
+  "updated_at": "2026-11-19T17:38:00Z",
   "plugins": [
     {
       "name": "parser-rust",
@@ -1146,6 +1146,125 @@
       ],
       "provides": "swarm-strategy:competitive@v1\nswarm:speculative-race@v1",
       "download_url": "https://github.com/adevcorn/basalt-plugin-swarm-competitive/releases/download/v0.1.0/swarm_competitive.wasm"
+    },
+    {
+      "name": "parser-koka",
+      "version": "0.1.0",
+      "description": "Pure-Rust Koka parser plugin. Provides syntax highlighting, semantic retrieval chunks, and call-site extraction for .kk and .kki files.",
+      "author": "adevcorn",
+      "tags": [
+        "koka",
+        "algebraic-effects",
+        "parser",
+        "syntax"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki"
+      ],
+      "parser_filename": "kk",
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/kk.wasm"
+    },
+    {
+      "name": "semantic-facts-koka",
+      "version": "0.1.0",
+      "description": "Provides semantic facts (declarations, calls, imports, algebraic effect rows, and I/O effects) for Koka.",
+      "author": "adevcorn",
+      "tags": [
+        "koka",
+        "algebraic-effects",
+        "semantic",
+        "facts",
+        "purity"
+      ],
+      "capabilities": [
+        "SEMANTIC_FACTS"
+      ],
+      "hook_flags": 196608,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki"
+      ],
+      "provides": "semantic-facts@koka/v1",
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/semantic-facts-koka.wasm"
+    },
+    {
+      "name": "koka-project-model",
+      "version": "0.1.0",
+      "description": "Koka project model provider. Discovers koka.toml/koka.yaml or .kk projects and runs koka -c and koka -e review actions.",
+      "author": "adevcorn",
+      "tags": [
+        "koka",
+        "project-model",
+        "build",
+        "test"
+      ],
+      "capabilities": [
+        "PROJECT_MODEL",
+        "BUILD_SYSTEM",
+        "TEST_RUNNER",
+        "REVIEW_ACTIONS",
+        "SHADOW_EXCLUDES"
+      ],
+      "hook_flags": 103817472,
+      "file_globs": [
+        "**/koka.toml",
+        "**/koka.yaml",
+        "**/*.kk"
+      ],
+      "provides": "project-model:koka",
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/koka-project-model.wasm"
+    },
+    {
+      "name": "lsp-koka",
+      "version": "0.1.0",
+      "description": "Koka language-server bridge backed by koka --language-server --lsstdio, providing diagnostics and hover.",
+      "author": "adevcorn",
+      "tags": [
+        "koka",
+        "lsp",
+        "diagnostics",
+        "hover"
+      ],
+      "capabilities": [
+        "DIAGNOSTICS",
+        "HOVER"
+      ],
+      "hook_flags": 513,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki",
+        "**/koka.toml",
+        "**/koka.yaml"
+      ],
+      "provides": "lsp:koka",
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/lsp-koka.wasm"
+    },
+    {
+      "name": "tier0-koka",
+      "version": "0.1.0",
+      "description": "Sub-50us Tier-0 static safety check provider for Koka (.kk, .kki) detecting division-by-zero and partial calls.",
+      "author": "adevcorn",
+      "tags": [
+        "koka",
+        "tier0",
+        "verification",
+        "safety"
+      ],
+      "capabilities": [
+        "TIER0"
+      ],
+      "hook_flags": 16908288,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki"
+      ],
+      "provides": "tier0@koka/v1\ntier0@kk/v1",
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/tier0-koka.wasm"
     }
   ],
   "packs": [
@@ -1529,6 +1648,84 @@
       ],
       "supersedes": [
         "parser-yaml"
+      ]
+    },
+    {
+      "name": "language-koka",
+      "version": "0.1.0",
+      "kind": "language-pack",
+      "description": "Koka language pack: pure-Rust parser, effect-row semantic facts, project model, LSP bridge, and Tier-0 safety checks.",
+      "author": "adevcorn",
+      "tags": [
+        "language-pack",
+        "koka",
+        "algebraic-effects"
+      ],
+      "capabilities": [
+        "SYNTAX_PARSER",
+        "SEMANTIC_FACTS",
+        "PROJECT_MODEL",
+        "BUILD_SYSTEM",
+        "TEST_RUNNER",
+        "REVIEW_ACTIONS",
+        "SHADOW_EXCLUDES",
+        "DIAGNOSTICS",
+        "HOVER",
+        "TIER0"
+      ],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki"
+      ],
+      "artifacts": [
+        {
+          "kind": "parser",
+          "artifact": "kk.wasm",
+          "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/kk.wasm",
+          "target": "wasm32-wasip1",
+          "parser_filename": "kk",
+          "sha256": "ad72c977fccb8ff1def39db21140b5a522fbca2110e3d6cdbe1a1ff58cff3d6d"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "semantic-facts-koka.wasm",
+          "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/semantic-facts-koka.wasm",
+          "install_as": "semantic-facts-koka",
+          "target": "wasm32-unknown-unknown",
+          "sha256": "c1a4f5d002de9d27ca0e2a392f6723608e3947a42e265c0edf6384653a8a71c9"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "koka-project-model.wasm",
+          "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/koka-project-model.wasm",
+          "install_as": "koka-project-model",
+          "target": "wasm32-unknown-unknown",
+          "sha256": "308db86d977ea01510a066ddf851396a5294ffc36d550a12656d7c19f9b47160"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "lsp-koka.wasm",
+          "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/lsp-koka.wasm",
+          "install_as": "lsp-koka",
+          "target": "wasm32-unknown-unknown",
+          "sha256": "8f6e9739254df734f11fa7f5c0da34d2edd690211dafdad52373941dd90283ec"
+        },
+        {
+          "kind": "plugin",
+          "artifact": "tier0-koka.wasm",
+          "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/tier0-koka.wasm",
+          "install_as": "tier0-koka",
+          "target": "wasm32-unknown-unknown",
+          "sha256": "cbceb9c5e53632a3a7460f4329a2db76147a0d423da9bcca8b2ca7100baa3653"
+        }
+      ],
+      "supersedes": [
+        "parser-koka",
+        "semantic-facts-koka",
+        "koka-project-model",
+        "lsp-koka",
+        "tier0-koka"
       ]
     }
   ],
@@ -2147,6 +2344,40 @@
       "target": "wasm32-unknown-unknown",
       "sha256": "a1da744287fb7955f24f92b4bbf2f0e59a6f97e5bfc74f17b3c283e0c6c646e8",
       "addon": true
+    },
+    {
+      "name": "koka",
+      "version": "0.1.0",
+      "kind": "preset",
+      "description": "Koka language support",
+      "author": "adevcorn",
+      "tags": [
+        "preset",
+        "koka"
+      ],
+      "capabilities": [],
+      "hook_flags": 0,
+      "file_globs": [
+        "**/*.kk",
+        "**/*.kki",
+        "**/koka.toml",
+        "**/koka.yaml"
+      ],
+      "markers": [
+        "**/*.kk",
+        "**/koka.toml",
+        "**/koka.yaml"
+      ],
+      "language_globs": [
+        "**/*.kk",
+        "**/*.kki"
+      ],
+      "members": [
+        {
+          "name": "language-koka",
+          "required": true
+        }
+      ]
     }
   ]
 }
