@@ -1167,7 +1167,8 @@
         "**/*.kki"
       ],
       "parser_filename": "kk",
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/kk.wasm"
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/kk.wasm",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-parser-koka"
     },
     {
       "name": "semantic-facts-koka",
@@ -1190,7 +1191,8 @@
         "**/*.kki"
       ],
       "provides": "semantic-facts@koka/v1",
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/semantic-facts-koka.wasm"
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/semantic-facts-koka.wasm",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-semantic-facts-koka"
     },
     {
       "name": "koka-project-model",
@@ -1217,7 +1219,8 @@
         "**/*.kk"
       ],
       "provides": "project-model:koka",
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/koka-project-model.wasm"
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/koka-project-model.wasm",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-koka-project-model"
     },
     {
       "name": "lsp-koka",
@@ -1242,7 +1245,8 @@
         "**/koka.yaml"
       ],
       "provides": "lsp:koka",
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/lsp-koka.wasm"
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/lsp-koka.wasm",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-lsp-koka"
     },
     {
       "name": "tier0-koka",
@@ -1264,7 +1268,8 @@
         "**/*.kki"
       ],
       "provides": "tier0@koka/v1\ntier0@kk/v1",
-      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/tier0-koka.wasm"
+      "download_url": "https://raw.githubusercontent.com/adevcorn/basalt-registry/main/artifacts/language-koka/tier0-koka.wasm",
+      "homepage": "https://github.com/adevcorn/basalt-plugin-tier0-koka"
     }
   ],
   "packs": [
